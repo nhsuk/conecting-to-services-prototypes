@@ -1,0 +1,88 @@
+{% extends '_layouts/layout_2-3_no_title_block.html' %}
+
+
+{% block page_title %}
+Stomach ache symptoms and conditions - NHS.UK
+{% endblock %}
+
+
+{% block pageTitle %}
+Confirm your identity
+{% endblock %}
+
+{% block pageIntro %}
+
+{% endblock %}
+
+
+{% block content %}
+<p>To help us find your GP enter the following information.</p>
+
+<form>
+
+  <fieldset>
+    <legend>Your first name</legend>
+    <div class="form-group">
+      <input type="text" id="first-name" name="first-name" value="" class="text">
+    </div>
+  </fieldset>
+
+<fieldset>
+  <legend>Your last name</legend>
+  <div class="form-group">
+    <input type="text" id="last-name" name="last-name" value="" class="text">
+  </div>
+</fieldset>
+
+<fieldset>
+  <legend>
+    What is your date of birth?
+    <span class="form-hint">
+      For example: 31/12/1980
+    </span>
+  </legend>
+  <div class="form-group -date">
+    <div>
+      <label for="dob-day">Day</label>
+      <input type="text" id="dob-day" name="dob-day" value="" class="day">
+    </div>
+    <div>
+      <label for="dob-month">Month</label>
+      <input type="text" id="dob-month" name="dob-month" value="" class="month">
+    </div>
+    <div>
+      <label for="dob-year">Year</label>
+      <input type="text" id="dob-year" name="dob-year" value="" class="year">
+    </div>
+  </div>
+</fieldset>
+
+<fieldset>
+  <legend>Your home's postcode</legend>
+  <div class="form-group">
+    <input type="text" id="first-name" name="first-name" value="" class="postcode">
+  </div>
+</fieldset>
+
+
+</form>
+
+<p><a href="gp-practice-page" class="button">Continue</a></p>
+
+
+{% endblock %}
+
+
+{% block emergencyContent %}
+
+
+{% endblock%}
+
+{% block mutedCallout%}
+
+
+{% endblock%}
+
+{% block body_after %}
+
+{% endblock %}

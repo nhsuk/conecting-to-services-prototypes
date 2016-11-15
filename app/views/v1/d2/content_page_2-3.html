@@ -1,0 +1,52 @@
+{% extends '_layouts/layout_2-3.html' %}
+
+
+{% block page_title %}
+  Your name :
+  {% if practiceName %}
+    Register with {{ practiceName }}
+  {% else %}
+    {{serviceName}}
+  {% endif %}
+{% endblock %}
+
+
+{% block pageTitle %}
+Title for this page goes here, to a two-thirds grid
+{% endblock %}
+
+{% block pageIntro %}
+An example intro.
+{% endblock %}
+
+
+{% block content %}
+{% if practiceName %}
+  <!-- <p>Register with {{ practiceName }}</p>-->
+{% endif %}
+
+Two thirds column two thirds column two thirds column two thirds column two thirds column two thirds column two thirds column two thirds column two thirds column two thirds column.
+
+{% endblock %}
+
+
+
+{% block body_after %}
+  <script>
+    $(function() {
+      var $group = $('#previous-name');
+      var $els = $('[name="name-changed"]');
+      var $selectedEl = $('[name="name-changed"]:checked');
+      if ($selectedEl.val() !== "yes") {
+        $group.hide();
+      }
+      $els.on('change', function(e) {
+        if (this.value === "yes") {
+          $group.show();
+        } else {
+          $group.hide();
+        }
+      });
+    });
+  </script>
+{% endblock %}

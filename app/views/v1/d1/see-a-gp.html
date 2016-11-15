@@ -1,0 +1,65 @@
+{% extends '_layouts/layout_2-3_no_title_block.html' %}
+
+
+{% block page_title %}
+Stomach ache symptoms and conditions - NHS.UK
+{% endblock %}
+
+
+{% block pageTitle %}
+See a GP
+{% endblock %}
+
+{% block pageIntro %}
+
+{% endblock %}
+
+
+{% block content %}
+
+
+
+<p>A GP can treat warts. They will treat this as a non-emergency. You may have to wait up to a month to receive treatment.</p>
+
+
+<form class="form" id="formname">
+
+<fieldset>
+  <legend class="secondary">Are you registered with a GP?</legend>
+  <div class="form-group">
+    <label for="radio-1" class="block-label">
+      <input id="radio-1" type="radio" name="radio-group" value="radio-1"  onclick="document.getElementById('formname').action='find-your-gp';document.getElementById('submit')">
+      Yes
+    </label>
+    <label for="radio-2" class="block-label">
+      <input id="radio-2" type="radio" name="radio-group" value="radio-2" onclick="document.getElementById('formname').action='not-registered';document.getElementById('submit')">
+      No
+    </label>
+  </div>
+</fieldset>
+
+
+<input type="submit" class="button" value="Continue">
+
+</form>
+
+<p style="top-margin:16px;">
+  Not know your GP? <a href="find-your-gp">Find your GP</a>.
+</p>
+
+{% endblock %}
+
+
+{% block emergencyContent %}
+
+
+{% endblock%}
+
+{% block mutedCallout%}
+
+
+{% endblock%}
+
+{% block body_after %}
+
+{% endblock %}
