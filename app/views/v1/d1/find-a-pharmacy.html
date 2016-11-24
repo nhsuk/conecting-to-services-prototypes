@@ -7,7 +7,7 @@ Stomach ache symptoms and conditions - NHS.UK
 
 
 {% block pageTitle %}
-You are not registered with a GP
+Find a pharmacy
 {% endblock %}
 
 {% block pageIntro %}
@@ -16,9 +16,24 @@ You are not registered with a GP
 
 
 {% block content %}
-<p>To receive this treatment you need to be registered with a GP practice.</p>
 
-<p>You can <a href="">register online</a>.</p>
+<form>
+
+<fieldset>
+  <legend>Enter a postcode</legend>
+  <div class="form-group">
+    <input type="text" size="30">
+  </div>
+</fieldset>
+
+<p style="margin-top: 16px; margin-bottom: 0;"><a href="show-list-of-pharmacies" class="button">Search</a></p>
+
+<p style="margin-top: 0;"><a href="#" class="link-back">Back to information on head lice</a></p>
+
+
+</form>
+
+
 
 
 {% endblock %}
