@@ -24,6 +24,14 @@ router.get('/example', function (req, res) {
   });
 });
 
+router.post('/find-a-pharmacy', function (req, res) {
+
+  req.session.postcode = {
+    'postcode': req.body['postcode']
+  };
+
+})
+
 router.post('/name', function (req, res) {
 
   var passed = true;
