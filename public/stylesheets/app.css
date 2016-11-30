@@ -1011,6 +1011,7 @@ textarea:focus {
 .muted {
   background-color: #d9e1e2;
   padding: 16px 16px 16px 32px;
+  border-left: solid 6px #231f20;
 }
 
 .severe {
