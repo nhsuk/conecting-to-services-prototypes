@@ -12,13 +12,12 @@
   <body class="{% block body_css_classes %}{% endblock %}">
     <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
 
-    {% include '_includes/notification-banner.html' %}
+    {% include '_includes/service-alert.html' %}
 
     {% block header_before %}{% endblock %}
 
     {% include '_includes/masthead.html' %}
 
-    {% include '_includes/service-alert.html' %}
 
 
     <main id="content" role="main" class="content">
