@@ -994,7 +994,7 @@ textarea:focus {
   border: solid #cc9316;
   border-width: 4px 0;
   padding: 32px;
-  margin-bottom: 16px;
+  margin: 32px 0;
 }
 
 .callout p {
@@ -1012,6 +1012,7 @@ textarea:focus {
   background-color: #d9e1e2;
   padding: 16px 16px 16px 32px;
   border-left: solid 6px #231f20;
+  margin-bottom: 32px;
 }
 
 .severe {

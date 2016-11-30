@@ -9,7 +9,7 @@
   border: solid $callout-border;
   border-width: 4px 0;
   padding: $leading*2;
-  margin-bottom: $leading;
+  margin: $leading*2 0;
 }
 
 .callout p {
@@ -27,6 +27,7 @@
   background-color: #d9e1e2;
   padding: $leading $leading $leading $leading*2;
   border-left: solid 6px $black;
+  margin-bottom: 32px;
 
 }
 
