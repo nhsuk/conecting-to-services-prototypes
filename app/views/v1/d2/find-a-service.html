@@ -1,0 +1,234 @@
+{% extends '_layouts/layout_2-3_no_title_block.html' %}
+
+
+{% block page_title %}
+Stomach ache symptoms and conditions - NHS.UK
+{% endblock %}
+
+{% set pageTitle = '' %}
+
+{% if condition != '' %}
+
+  {% if condition == 'diabetes' %}
+    {% set backLink = 'diabetes' %}
+    {% set conditionName = 'diabetes' %}
+    {% set showBackLink = 'true' %}
+    {% set pageTitle = 'Find a GP to help' %}
+
+
+    {% set serviceGP = 'true' %}
+  {% endif %}
+
+  {% if condition == 'head_lice' %}
+    {% set backLink = 'head-lice' %}
+    {% set conditionName = 'head lice' %}
+    {% set showBackLink = 'true' %}
+
+    {% set servicePharmacy = 'true' %}
+  {% endif %}
+
+  {% if condition == 'stomach_ache' %}
+    {% set backLink = 'stomach-ache' %}
+    {% set conditionName = 'stomach ache' %}
+    {% set showBackLink = 'true' %}
+
+    {% set servicePharmacy = 'true' %}
+    {% set serviceWalkInCentre = 'true' %}
+    {% set serviceGP = 'true' %}
+  {% endif %}
+
+  {% if condition == 'warts_and_veruccas' %}
+    {% set backLink = 'warts-and-veruccas' %}
+    {% set conditionName = 'warts and veruccas' %}
+    {% set showBackLink = 'true' %}
+    {% set pageTitle = 'Get NHS help for warts' %}
+
+
+    {% set servicePharmacy = 'true' %}
+    {% set serviceGP = 'true' %}
+    {% set serviceWalkInCentre = 'true' %}
+    {% set serviceUrgentCareCentre = 'true' %}
+  {% endif %}
+
+  {% if condition == 'genital_warts' %}
+    {% set backLink = 'warts-and-veruccas' %}
+    {% set conditionName = 'warts and veruccas' %}
+    {% set showBackLink = 'true' %}
+    {% set pageTitle = 'Get NHS help for genital warts' %}
+    {% set introCopy = 'There are several NHS services that can help you with genital warts.' %}
+
+    {% set serviceGP = 'true' %}
+    {% set serviceSexualHealthClinic = 'true' %}
+  {% endif %}
+
+
+{% endif%}
+
+{% if pageTitle == '' %}
+ {% set pageTitle = 'Find an NHS service to help' %}
+{% endif %}
+
+
+{% set count = 0 %}
+
+{% if servicePharmacy == 'true' %}
+  {% set count = count +1 %}
+{% endif %}
+
+{% if serviceGP == 'true' %}
+  {% set count = count +1 %}
+{% endif %}
+
+{% if serviceSexualHealthClinic == 'true' %}
+  {% set count = count +1 %}
+{% endif %}
+
+{% if serviceWalkInCentre == 'true' %}
+  {% set count = count +1 %}
+{% endif %}
+
+{% if serviceUrgentCareCentre == 'true' %}
+  {% set count = count +1 %}
+{% endif %}
+
+
+{% block pageTitle %}
+
+{{ pageTitle }}
+
+{% endblock %}
+
+{% block pageIntro %}
+
+{% endblock %}
+
+
+{% block content %}
+
+
+{% if introCopy %}
+  <p>{{ introCopy }}</p>
+{% endif %}
+
+<form action="show-list-of-services">
+
+  {% if condition == 'genital_warts' %}
+
+  <p>To find services close to you enter a location and select which services you'd like to visit.</p>
+
+
+  {% endif %}
+
+<fieldset>
+  <legend><strong>Enter a location</strong></legend>
+  <div class="form-group">
+    <input type="text" size="30" name="postcode">
+        <p id="uselocation"><a href="javascript: getLocation()" style="margin-top:-32px;">Use my current location</a></p>
+  </div>
+</fieldset>
+
+{% if count > '1' %}
+
+<strong>Select services</strong>
+<p>
+{% if servicePharmacy == 'true' %}
+<input type="checkbox" checked>Pharmacy<br />
+{% endif %}
+{% if serviceGP == 'true' %}
+<input type="checkbox" checked>GP<br />
+{% endif %}
+{% if serviceSexualHealthClinic == 'true' %}
+<input type="checkbox" checked>Sexual health clinic<br />
+{% endif %}
+{% if serviceWalkInCentre == 'true' %}
+<input type="checkbox" checked>Walk-in Centre<br /></p>
+{% endif %}
+{% if serviceUrgentCareCentre == 'true' %}
+<input type="checkbox" checked>Urgent care centre<br /></p>
+{% endif %}
+
+</p>
+
+{% endif %}
+
+<input type="hidden" name="condition" value="{{ condition }}">
+<input type="hidden" name="conditionName" value="{{ conditionName }}">
+<input type="hidden" name="servicePharmacy" value="{{ servicePharmacy }}">
+<input type="hidden" name="serviceGP" value="{{ serviceGP }}">
+<input type="hidden" name="serviceWalkInCentre" value="{{ serviceWalkInCentre }}">
+<input type="hidden" name="serviceSexualHealthClinic" value="{{ serviceSexualHealthClinic }}">
+
+<button type="submit" class="button" style="margin-top: 0; margin-bottom: 0;">Search</button>
+
+
+  {% if showBackLink == 'true' %}
+  <p style="margin-top: 0;">
+    <a href="{{ backLink }}" class="link-back">Back to information on {{ conditionName }}</a>
+  </p>
+  {% elseif servicePharmacy == 'true' %}
+  <p style="margin-top: 0;">
+    <a href="pharmacies" class="link-back">Information on pharmacies</a>
+  </p>
+  {% elseif serviceGP == 'true' %}
+  <p style="margin-top: 0;">
+    <a href="GPs" class="link-back">Information on GPs</a>
+  </p>
+
+  {% endif %}
+
+
+</form>
+
+  <script>
+  var x = document.getElementById("uselocation");
+
+  function getLocation() {
+      if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(showPosition, showError);
+      } else {
+          x.innerHTML = "Geolocation is not supported by this browser.";
+      }
+  }
+
+  function showPosition(position) {
+      x.innerHTML = "Latitude: " + position.coords.latitude +
+      "<br>Longitude: " + position.coords.longitude;
+  }
+
+  function showError(error) {
+      switch(error.code) {
+          case error.PERMISSION_DENIED:
+              x.innerHTML = "User denied the request for Geolocation."
+              break;
+          case error.POSITION_UNAVAILABLE:
+              x.innerHTML = "Location information is unavailable."
+              break;
+          case error.TIMEOUT:
+              x.innerHTML = "The request to get user location timed out."
+              break;
+          case error.UNKNOWN_ERROR:
+              x.innerHTML = "An unknown error occurred."
+              break;
+      }
+  }
+  </script>
+
+
+
+
+{% endblock %}
+
+
+{% block emergencyContent %}
+
+
+{% endblock%}
+
+{% block mutedCallout%}
+
+
+{% endblock%}
+
+{% block body_after %}
+
+{% endblock %}

@@ -17,7 +17,9 @@ Find a pharmacy
 
 {% block content %}
 
-<form action="show-list-of-pharmacies">
+**{{ condition }}**
+
+<form action="show-list-of-pharmacies-with-full-times-v3-2">
 
 <fieldset>
   <legend>Enter a postcode</legend>
@@ -28,7 +30,34 @@ Find a pharmacy
 
 <button type="submit" class="button" style="margin-top: 0; margin-bottom: 0;">Search</button>
 
-<p style="margin-top: 0;"><a href="head-lice" class="link-back">Back to information on head lice</a></p>
+<p style="margin-top: 0;">
+{% if condition != '' %}
+
+  {% if condition == 'head_lice' %}
+    {% set backLink = 'head-lice' %}
+    {% set conditionName = 'head lice' %}
+    {% set showBackLink = 'true' %}
+  {% endif %}
+
+  {% if condition == 'stomach_ache' %}
+    {% set backLink = 'stomach-ache' %}
+    {% set conditionName = 'stomach ache' %}
+    {% set showBackLink = 'true' %}
+  {% endif %}
+
+  {% if condition == 'warts_and_veruccas' %}
+    {% set backLink = 'stomach-ache' %}
+    {% set conditionName = 'stomach ache' %}
+    {% set showBackLink = 'true' %}
+  {% endif %}
+
+
+  {% if showBackLink == 'true' %}
+    <a href="{{ backLink }}" class="link-back">Back to information on {{ conditionName }}</a></p>
+  {% endif %}
+
+{% endif%}
+
 
 
 </form>

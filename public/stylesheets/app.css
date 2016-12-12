@@ -319,13 +319,13 @@ hr {
 
 .service-alert {
   background-color: #FFB81C;
-  color: #0b0c0c;
+  color: #00365D;
   font-size: 16px;
   line-height: 16px;
 }
 
 .service-alert a {
-  color: #0b0c0c;
+  color: #00365D;
 }
 
 .service-alert-inner {
@@ -346,7 +346,9 @@ hr {
 }
 
 .service-status {
-  border: 2px solid #0b0c0c;
+  border: 2px solid #00365D;
+  background-color: #00365D;
+  color: #FFB81C;
   padding: 5px 10px;
   margin: 0 10px 0 0;
   font-weight: 200;
@@ -566,6 +568,16 @@ table.natural {
 
 table.compact th, table.compact td {
   padding: leading/2;
+}
+
+.serviceproviderOpeningTimes table {
+  border-top: 2px solid #333333;
+  margin-top: 32px;
+}
+
+.serviceproviderOpeningTimes tr {
+  border-top: 2px solid #333333;
+  border-bottom: 2px solid #333333;
 }
 
 details {

@@ -7,7 +7,7 @@ Note this is prototype code. Not intended for production use.
 Make sure you have Grunt installed first.
 
 Clone this repo:
-`git clone git@github.com:nhsuk/XXXXXXXX.git`
+`git clone git@github.com:nhsuk/connecting-to-services-prototypes.git`
 
 Install the dependencies:
 `npm install`
