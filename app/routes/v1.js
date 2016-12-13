@@ -95,7 +95,7 @@ router.get('/d2/show-list-of-services', function (req, res) {
 
   var serviceGP = req.query.serviceGP;
   var servicePharmacy = req.query.servicePharmacy;
-
+  var serviceSexualHealthClinic = req.query.serviceSexualHealthClinic;
   var comment = 'nothing';
 
 
@@ -179,6 +179,42 @@ router.get('/d2/show-list-of-services', function (req, res) {
     }
 
 
+    if (serviceSexualHealthClinic == 'true') {
+
+      var sexualhealthclinicData = require('../views/v1/d2/data_files/data_sexualhealthclinic_LS.json');
+
+  //    console.log("--------------Pharmacies info --------");
+  //      for (var i = 0; i < pharmaciesData.length; ++i) {
+  //        console.log("Name "+[i]+" "+pharmaciesData[i].name);
+  //        console.log("Postcode "+[i]+" "+pharmaciesData[i].postcode);
+  //        console.log("Address1 "+[i]+" "+pharmaciesData[i].address1);
+  //        console.log("----------------------------------------");
+  //      }
+
+      var resultName0 = sexualhealthclinicData[0].name;
+      var address0_1 = sexualhealthclinicData[0].address1;
+      var address0_2 = sexualhealthclinicData[0].address2;
+      var address0_3 = sexualhealthclinicData[0].address3;
+      var postcode0 = sexualhealthclinicData[0].postcode;
+      var phone0 = sexualhealthclinicData[0].phone;
+
+      var resultName1 = sexualhealthclinicData[1].name;
+      var address1_1 = sexualhealthclinicData[1].address1;
+      var address1_2 = sexualhealthclinicData[1].address2;
+      var address1_3 = sexualhealthclinicData[1].address3;
+      var postcode1 = sexualhealthclinicData[1].postcode;
+      var phone1 = sexualhealthclinicData[1].phone;
+
+      var resultName2 = sexualhealthclinicData[2].name;
+      var address2_1 = sexualhealthclinicData[2].address1;
+      var address2_2 = sexualhealthclinicData[2].address2;
+      var address2_3 = sexualhealthclinicData[2].address3;
+      var postcode2 = sexualhealthclinicData[2].postcode;
+      var phone2 = sexualhealthclinicData[2].phone;
+
+      }
+
+
   res.render('v1/d2/show-list-of-services', {
     time: time,
     comment: comment,
@@ -210,7 +246,9 @@ router.get('/d2/show-list-of-services', function (req, res) {
 
 
     serviceGP: serviceGP,
-    servicePharmacy: servicePharmacy
+    servicePharmacy: servicePharmacy,
+    serviceSexualHealthClinic: serviceSexualHealthClinic
+
   });
 
 });
