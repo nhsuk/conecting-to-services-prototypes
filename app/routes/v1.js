@@ -112,13 +112,13 @@ router.get('/d2/show-list-of-services', function (req, res) {
 
     var GPData = require('../views/v1/d2/data_files/data_GP_LS.json');
 
-    console.log("--------------GP info --------");
-      for (var i = 0; i < GPData.length; ++i) {
-        console.log("Name "+[i]+" "+GPData[i].name);
-        console.log("Postcode "+[i]+" "+GPData[i].postcode);
-        console.log("Address1 "+[i]+" "+GPData[i].address1);
-        console.log("----------------------------------------");
-      }
+//    console.log("--------------GP info --------");
+//      for (var i = 0; i < GPData.length; ++i) {
+//        console.log("Name "+[i]+" "+GPData[i].name);
+//        console.log("Postcode "+[i]+" "+GPData[i].postcode);
+//        console.log("Address1 "+[i]+" "+GPData[i].address1);
+//        console.log("----------------------------------------");
+//      }
 
       var resultName0 = GPData[0].name;
       var address0_1 = GPData[0].address1;
@@ -149,13 +149,13 @@ router.get('/d2/show-list-of-services', function (req, res) {
 
     var pharmaciesData = require('../views/v1/d2/data_files/data_pharmacies_LS.json');
 
-    console.log("--------------Pharmacies info --------");
-      for (var i = 0; i < pharmaciesData.length; ++i) {
-        console.log("Name "+[i]+" "+pharmaciesData[i].name);
-        console.log("Postcode "+[i]+" "+pharmaciesData[i].postcode);
-        console.log("Address1 "+[i]+" "+pharmaciesData[i].address1);
-        console.log("----------------------------------------");
-      }
+//    console.log("--------------Pharmacies info --------");
+//      for (var i = 0; i < pharmaciesData.length; ++i) {
+//        console.log("Name "+[i]+" "+pharmaciesData[i].name);
+//        console.log("Postcode "+[i]+" "+pharmaciesData[i].postcode);
+//        console.log("Address1 "+[i]+" "+pharmaciesData[i].address1);
+//        console.log("----------------------------------------");
+//      }
 
     var resultName0 = pharmaciesData[0].name;
     var address0_1 = pharmaciesData[0].address1;
