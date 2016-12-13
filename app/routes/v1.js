@@ -3,7 +3,7 @@ var router = express.Router()
 
 var request = require('request')
 var naturalSort = require('javascript-natural-sort')
-var postcode_api = process.env.POSTCODE_API
+// var postcode_api = process.env.POSTCODE_API
 
 // V1 prototype. Sprints 0-3. Simple recreation of GMS1
 
@@ -110,7 +110,7 @@ router.get('/d2/show-list-of-services', function (req, res) {
 
   if (serviceGP == 'true') {
 
-    var GPData = require('../views/v1/d2/data_files/data_GP_LS.json');
+    var GPData = require('../views/v1/d2/data_files/data_gp_LS.json');
 
 //    console.log("--------------GP info --------");
 //      for (var i = 0; i < GPData.length; ++i) {
@@ -127,14 +127,12 @@ router.get('/d2/show-list-of-services', function (req, res) {
       var postcode0 = GPData[0].postcode;
       var phone0 = GPData[0].phone;
 
-
       var resultName1 = GPData[1].name;
       var address1_1 = GPData[1].address1;
       var address1_2 = GPData[1].address2;
       var address1_3 = GPData[1].address3;
       var postcode1 = GPData[1].postcode;
       var phone1 = GPData[1].phone;
-
 
       var resultName2 = GPData[2].name;
       var address2_1 = GPData[2].address1;
