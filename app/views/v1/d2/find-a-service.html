@@ -191,8 +191,7 @@ Stomach ache symptoms and conditions - NHS.UK
   }
 
   function showPosition(position) {
-      x.innerHTML = "Latitude: " + position.coords.latitude +
-      "<br>Longitude: " + position.coords.longitude;
+      x.innerHTML = "<a href=\"https://www.google.co.uk/maps/@" + position.coords.latitude + "," +  + position.coords.longitude + ",14z\">View on map</a>";
   }
 
   function showError(error) {
