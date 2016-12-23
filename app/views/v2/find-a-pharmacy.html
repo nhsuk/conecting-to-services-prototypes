@@ -1,0 +1,83 @@
+{% extends '_layouts/layout_2-3_no_title_block.html' %}
+
+
+{% block page_title %}
+Stomach ache symptoms and conditions - NHS.UK
+{% endblock %}
+
+
+{% block pageTitle %}
+Find a pharmacy
+{% endblock %}
+
+{% block pageIntro %}
+
+{% endblock %}
+
+
+{% block content %}
+
+**{{ condition }}**
+
+<form action="show-list-of-pharmacies-with-full-times-v3-2">
+
+<fieldset>
+  <legend>Enter a postcode</legend>
+  <div class="form-group">
+    <input type="text" size="30" name="postcode">
+  </div>
+</fieldset>
+
+<button type="submit" class="button" style="margin-top: 0; margin-bottom: 0;">Search</button>
+
+<p style="margin-top: 0;">
+{% if condition != '' %}
+
+  {% if condition == 'head_lice' %}
+    {% set backLink = 'head-lice' %}
+    {% set conditionName = 'head lice' %}
+    {% set showBackLink = 'true' %}
+  {% endif %}
+
+  {% if condition == 'stomach_ache' %}
+    {% set backLink = 'stomach-ache' %}
+    {% set conditionName = 'stomach ache' %}
+    {% set showBackLink = 'true' %}
+  {% endif %}
+
+  {% if condition == 'warts_and_veruccas' %}
+    {% set backLink = 'stomach-ache' %}
+    {% set conditionName = 'stomach ache' %}
+    {% set showBackLink = 'true' %}
+  {% endif %}
+
+
+  {% if showBackLink == 'true' %}
+    <a href="{{ backLink }}" class="link-back">Back to information on {{ conditionName }}</a></p>
+  {% endif %}
+
+{% endif%}
+
+
+
+</form>
+
+
+
+
+{% endblock %}
+
+
+{% block emergencyContent %}
+
+
+{% endblock%}
+
+{% block mutedCallout%}
+
+
+{% endblock%}
+
+{% block body_after %}
+
+{% endblock %}

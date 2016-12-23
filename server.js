@@ -13,6 +13,7 @@ var config = require('./app/config.js')
 // Add in versions variable here - and make sure you jump down to the app.use as well
 var index = require('./app/routes/index');
 var v1 = require('./app/routes/v1');
+var v2 = require('./app/routes/v2');
 
 var app = express()
 
@@ -76,6 +77,7 @@ env.addFilter('date', dateFilter);
 // app.use - need to make sure you add in the version route here as well, yo
 app.use('/', index);
 app.use('/v1', v1);
+app.use('/v2', v2);
 
 // auto render any view that exists
 app.get(/^\/([^.]+)$/, function (req, res) {
