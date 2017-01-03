@@ -39,6 +39,7 @@ app.use(function (req, res, next) {
   res.locals.serviceName = config.serviceName
   res.locals.practiceName = config.practiceName
   res.locals.cookieText = config.cookieText
+  res.locals.regwithGPURL = config.regwithGPURL
   next()
 })
 

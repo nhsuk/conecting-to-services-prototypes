@@ -7,7 +7,7 @@ Stomach ache symptoms and conditions - NHS.UK
 
 
 {% block pageTitle %}
-See a GP about diabetes
+Book an appointment with a GP
 {% endblock %}
 
 {% block pageIntro %}
@@ -17,19 +17,20 @@ See a GP about diabetes
 
 {% block content %}
 
+<p>To book an appointment with your GP online you must already be registered with a GP surgery.</p>
+
+<p>You will need to tell us:</p>
+
+<ul>
+  <li>your full name</li>
+  <li>your date of birth</li>
+  <li>the postcode you used to register with your GP</li>
+</ul>
+
+<p><a href="https://systmonline.tpp-uk.com/2/Login?Date=20161114231637" class="button">Start</a>
 
 
-<p>A GP will treat this as a non-emergency. You may have to wait up to a month to receive treatment.</p>
-
-<section class="info-panel">You must be registered with a GP for this treatment. If you can are not registered with a GP <a href="">you can register now</a>.
-</section>
-
-
-<p><a href="find-a-gp" class="button">Book an appointment with a GP</a></p>
-
-<p style="top-margin:16px;">
-  Not know your GP? <a href="find-your-gp">Find your GP</a>.
-</p>
+<p class="info-panel">If you don’t have a GP, you can <a href="{{ regwithGPURL }}">find and register with a GP</a>.</p>
 
 {% endblock %}
 
