@@ -48,7 +48,7 @@ router.get('/google-results', function (req, res) {
 });
 
 
-router.get('find-a-service', function (req, res) {
+router.get('/find-a-service', function (req, res) {
 
   // get the answer from the query string (eg. ?over18=false)
   var condition = req.query.condition;

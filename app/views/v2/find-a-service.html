@@ -1,20 +1,13 @@
 {% extends '_layouts/layout_2-3_no_title_block.html' %}
 
 
-{% block page_title %}
-Stomach ache symptoms and conditions - NHS.UK
-{% endblock %}
-
 {% set pageTitle = '' %}
-
-{% if condition != '' %}
 
   {% if condition == 'diabetes' %}
     {% set backLink = 'diabetes' %}
     {% set conditionName = 'diabetes' %}
     {% set showBackLink = 'true' %}
     {% set pageTitle = 'Find a GP to help' %}
-
 
     {% set serviceGP = 'true' %}
   {% endif %}
@@ -23,8 +16,8 @@ Stomach ache symptoms and conditions - NHS.UK
     {% set backLink = 'head-lice' %}
     {% set conditionName = 'head lice' %}
     {% set showBackLink = 'true' %}
-
     {% set servicePharmacy = 'true' %}
+    {% set pageTitle = 'Headlice' %}
   {% endif %}
 
   {% if condition == 'stomach_ache' %}
@@ -38,6 +31,7 @@ Stomach ache symptoms and conditions - NHS.UK
   {% endif %}
 
   {% if condition == 'warts_and_veruccas' %}
+
     {% set backLink = 'warts-and-veruccas' %}
     {% set conditionName = 'warts and veruccas' %}
     {% set showBackLink = 'true' %}
@@ -62,7 +56,6 @@ Stomach ache symptoms and conditions - NHS.UK
   {% endif %}
 
 
-{% endif%}
 
 {% if pageTitle == '' %}
  {% set pageTitle = 'Find an NHS service to help' %}
@@ -90,6 +83,11 @@ Stomach ache symptoms and conditions - NHS.UK
 {% if serviceUrgentCareCentre == 'true' %}
   {% set count = count +1 %}
 {% endif %}
+
+
+{% block page_title %}
+Stomach ache symptoms and conditions - NHS.UK
+{% endblock %}
 
 
 {% block pageTitle %}
