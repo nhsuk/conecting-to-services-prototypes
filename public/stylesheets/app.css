@@ -1036,3 +1036,21 @@ textarea:focus {
 .severe hr {
   background-color: #768692;
 }
+
+.journey h1, .journey .heading-xxlarge, .journey .primary {
+  font: 36px;
+  line-height: 40px;
+}
+
+.journey h2, .journey .heading-xlarge, .journey .secondary {
+  line-height: 32px;
+  font-size: 16px;
+}
+
+.link_reverse-polarity {
+  color: #ffffff;
+}
+
+.link_reverse-polarity:visited {
+  color: #ffffff;
+}
