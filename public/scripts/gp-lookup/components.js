@@ -79,18 +79,25 @@ var SearchForm = React.createClass({
     return React.createElement(
       "form",
       { name: "gp-search", id: "gp-search", method: "get", className: "gp-finder-search" },
+
       React.createElement(
         "div",
         { className: "block-container" },
         React.createElement(
-          "h1",
-          null,
+          "h2",
+          { className: "journey" },
           React.createElement(
             "label",
             { htmlFor: "search" },
-            "Find your current GP practice"
+            "Book an appointment with a GP"
           )
         ),
+        React.createElement(
+          "p",
+          null,
+          "Enter the name of your GP practice."
+        ),
+
         React.createElement(
           "div",
           { className: "clearfix" },
@@ -122,7 +129,7 @@ var BackLink = React.createClass({
       { className: "form-group -controls" },
       React.createElement(
         "a",
-        { href: "current-gp", className: "button -back" },
+        { href: "diabetes", className: "button -back" },
         "Back"
       )
     );
@@ -142,7 +149,7 @@ var ResultsList = React.createClass({
       { className: "block-container" },
       React.createElement(
         "form",
-        { name: "gp-results", id: "gp-results", method: "post" },
+        { name: "gp-details", id: "gp-details", method: "post" },
         this.results(),
         this.footer()
       )
@@ -200,10 +207,12 @@ var PracticeResult = React.createClass({
     return React.createElement(
       "div",
       { className: className, id: id, tabIndex: "0" },
+      React.createElement("a", { className: "nostyle", href: "gp-details", onClick: this.onClick },
       React.createElement("h2", { className: "result-title", dangerouslySetInnerHTML: this.highlightText(this.props.practice.name.value, this.props.practice.name.matches) }),
       React.createElement("p", { className: "address", dangerouslySetInnerHTML: this.highlightText(this.props.practice.address.value, this.props.practice.address.matches) }),
       distance,
       practitioners
+    )
     );
   },
 
