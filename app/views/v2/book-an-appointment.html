@@ -17,21 +17,10 @@ Book an appointment with a GP
 
 {% block content %}
 
-<h2  class="h3">If you already have a GP</h2>
-
-
-<p>Enter the name of your GP practice to find out how you can book an appointment.</p>
-
-<form>
-
-<input type="text" size="30">
-
-<p><a href="gp-details-for-diabetes" class="button">Continue</a></p>
-
-</form>
+More random content
 
 <script>
-  var lookupURL = 'https://gp-lookup-demo.herokuapp.com';
+  var lookupURL = '/data/';
 </script>
 <script src="/scripts/react.js"></script>
 <script src="/scripts/react-dom.js"></script>
@@ -58,16 +47,16 @@ Book an appointment with a GP
   });
 </script>
 
-<p style="top-margin:16px;">
-  <b>If you haven't got a GP</b><br />
-  <a href="find-a-service?serviceprovider=GP">Find a GP in your area</a>
-</p>
 
 
 {% endblock %}
 
 
 {% block emergencyContent %}
+<p style="top-margin:16px;">
+  <b>If you haven't got a GP</b><br />
+  <a href="find-a-service?serviceprovider=GP">Find a GP in your area</a>
+</p>
 
 
 {% endblock%}
