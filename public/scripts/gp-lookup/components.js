@@ -219,10 +219,10 @@ var PracticeResult = React.createClass({
 
     for (var i = 0; i < text.length + 1; i++) {
       if (startIndices[i]) {
-        output += '<strong>';
+//        output += '<strong>';
       }
       if (endIndices[i - 1]) {
-        output += '</strong>';
+//        output += '</strong>';
       }
       if (!!text[i]) {
         output += text[i];

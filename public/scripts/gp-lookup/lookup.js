@@ -30,6 +30,7 @@ function search(text, maxResults) {
     currentAjaxRequest.abort();
   }
 
-  currentAjaxRequest = $.get(lookupURL + '/practices', {search: text, max: maxResults});
+//  currentAjaxRequest = $.get(lookupURL + '/practices', {search: text, max: maxResults});
+  currentAjaxRequest = $.get(lookupURL + 'street-lane.json');
   return currentAjaxRequest;
 }
