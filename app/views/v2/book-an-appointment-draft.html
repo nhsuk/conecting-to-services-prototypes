@@ -17,10 +17,10 @@ Book an appointment with a GP
 
 {% block content %}
 
-Random content
+More random content
 
 <script>
-  var lookupURL = 'https://gp-lookup-demo.herokuapp.com';
+  var lookupURL = 'http://gp-lookup-demo.herokuapp.com';
 </script>
 <script src="/scripts/react.js"></script>
 <script src="/scripts/react-dom.js"></script>
@@ -47,16 +47,16 @@ Random content
   });
 </script>
 
-<p style="top-margin:16px;">
-  <b>If you haven't got a GP</b><br />
-  <a href="find-a-service?serviceprovider=GP">Find a GP in your area</a>
-</p>
 
 
 {% endblock %}
 
 
 {% block emergencyContent %}
+<p style="top-margin:16px;">
+  <b>If you haven't got a GP</b><br />
+  <a href="find-a-service?serviceprovider=GP">Find a GP in your area</a>
+</p>
 
 
 {% endblock%}
