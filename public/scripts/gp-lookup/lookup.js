@@ -31,6 +31,6 @@ function search(text, maxResults) {
   }
 
 //  currentAjaxRequest = $.get(lookupURL + '/practices', {search: text, max: maxResults});
-  currentAjaxRequest = $.get(lookupURL + 'street-lane.json');
+  currentAjaxRequest = $.get(lookupURL + 'meanwood.json');
   return currentAjaxRequest;
 }
