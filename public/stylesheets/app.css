@@ -993,8 +993,9 @@ textarea:focus {
   font-size: 20px;
   font-weight: 400;
   color: #0072c6;
-  text-decoration: underline;
+  text-decoration: none;
   margin: 0;
+  padding: 0;
 }
 
 .gp-finder-results p {
@@ -1095,6 +1096,20 @@ textarea:focus {
   .gp-finder-no-results li {
     margin-bottom: 8px;
   }
+}
+
+p.address {
+  margin-top: 0;
+  text-decoration: none;
+}
+
+a.address:visited {
+  margin-top: 0;
+  text-decoration: none;
+}
+
+label {
+  font-weight: 800;
 }
 
 #global-header {

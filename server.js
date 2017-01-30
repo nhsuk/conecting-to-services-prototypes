@@ -14,6 +14,7 @@ var config = require('./app/config.js')
 var index = require('./app/routes/index');
 var v1 = require('./app/routes/v1');
 var v2 = require('./app/routes/v2');
+var v3 = require('./app/routes/v3');
 
 var app = express()
 

@@ -1,0 +1,46 @@
+{% extends '_layouts/layout_google-results.html' %}
+
+
+{% block pageTitle %}
+Google results
+{% endblock%}
+
+
+{% block content %}
+
+
+{% if searchTerm == 'pharmacies' %}
+  <a href="pharmacies">Pharmacies</a>
+{% endif %}
+
+{% if searchTerm == 'pharmacies near LS1' %}
+  <a href="show-list-of-services?servicePharmacy=true&postcode=LS1">Pharmacies near LS1</a>
+{% endif %}
+
+{% if searchTerm == 'GP' %}
+  <a href="GPs">GP</a>
+{% endif %}
+
+
+{% if searchTerm == 'diabetes' %}
+  <a href="diabetes">Information about Diabetes</a>
+{% endif %}
+
+{% if searchTerm == 'head lice' %}
+  <a href="head-lice">Information about head lice</a>
+{% endif %}
+
+{% if searchTerm == 'stomach ache' %}
+  <a href="stomach-ache">Information about stomach aches</a>
+{% endif %}
+
+{% if searchTerm == 'warts' %}
+  <a href="warts-and-verrucas">Information about warts</a>
+{% endif %}
+
+{% if searchTerm == 'verrucas' %}
+  <a href="warts-and-verrucas">Information about verrucas</a>
+{% endif %}
+
+
+{% endblock %}

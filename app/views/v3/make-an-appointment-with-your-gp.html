@@ -1,0 +1,49 @@
+{% extends '_layouts/layout_2-3_no_title_block.html' %}
+
+
+{% block page_title %}
+Stomach ache symptoms and conditions - NHS.UK
+{% endblock %}
+
+
+{% block pageTitle %}
+Make an apppointment with your GP
+{% endblock %}
+
+{% block pageIntro %}
+
+{% endblock %}
+
+
+{% block content %}
+<p>Enter the name or address of a GP practice, or the name of the doctor you are registered with.</p>
+
+<form>
+
+<input type="text" size="30">
+
+</form>
+
+<p><a href="show-list-of-services?postcode=&condition=&conditionName=head+lice&servicePharmacy=&serviceGP=true&serviceWalkInCentre=&serviceSexualHealthClinic=" class="button">Continue</a></p>
+
+<p style="top-margin:16px;">
+  Not registered with a GP? <a href="{{ registerGPURL }}">Register with one</a>.
+</p>
+
+
+{% endblock %}
+
+
+{% block emergencyContent %}
+
+
+{% endblock%}
+
+{% block mutedCallout%}
+
+
+{% endblock%}
+
+{% block body_after %}
+
+{% endblock %}
