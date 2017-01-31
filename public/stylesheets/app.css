@@ -1109,7 +1109,11 @@ a.address:visited {
 }
 
 label {
-  font-weight: 800;
+  font-weight: 600;
+}
+
+.-back {
+  text-align: left;
 }
 
 #global-header {
