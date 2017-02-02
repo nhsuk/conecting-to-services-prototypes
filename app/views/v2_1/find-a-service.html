@@ -1,0 +1,323 @@
+{% extends '_layouts/layout_2-3_no_title_block.html' %}
+
+
+{% set pageTitle = '' %}
+
+  {% if condition == 'diabetes' %}
+    {% set backLink = 'diabetes' %}
+    {% set conditionName = 'diabetes' %}
+    {% set showBackLink = 'true' %}
+    {% set pageTitle = 'Find a GP to help' %}
+
+    {% set serviceGP = 'true' %}
+  {% endif %}
+
+  {% if condition == 'head_lice' %}
+    {% set backLink = 'head-lice' %}
+    {% set conditionName = 'head lice' %}
+    {% set showBackLink = 'true' %}
+    {% set servicePharmacy = 'true' %}
+    {% set pageTitle = 'Headlice' %}
+  {% endif %}
+
+  {% if condition == 'stomach_ache' %}
+    {% set backLink = 'stomach-ache' %}
+    {% set conditionName = 'stomach ache' %}
+    {% set showBackLink = 'true' %}
+
+    {% set servicePharmacy = 'true' %}
+    {% set serviceWalkInCentre = 'true' %}
+    {% set serviceGP = 'true' %}
+  {% endif %}
+
+  {% if condition == 'warts_and_veruccas' %}
+
+    {% set backLink = 'warts-and-veruccas' %}
+    {% set conditionName = 'warts and veruccas' %}
+    {% set showBackLink = 'true' %}
+    {% set pageTitle = 'Get NHS help for warts' %}
+
+
+    {% set servicePharmacy = 'true' %}
+    {% set serviceGP = 'true' %}
+    {% set serviceWalkInCentre = 'true' %}
+    {% set serviceUrgentCareCentre = 'true' %}
+  {% endif %}
+
+  {% if condition == 'genital_warts' %}
+    {% set backLink = 'warts-and-veruccas' %}
+    {% set conditionName = 'warts and veruccas' %}
+    {% set showBackLink = 'true' %}
+    {% set pageTitle = 'Get NHS help for genital warts' %}
+    {% set introCopy = 'There are several NHS services that can help you with genital warts.' %}
+
+    {% set serviceGP = 'true' %}
+    {% set serviceSexualHealthClinic = 'true' %}
+  {% endif %}
+
+
+
+{% if pageTitle == '' %}
+ {% set pageTitle = 'Find an NHS service to help' %}
+{% endif %}
+
+
+{% set count = 0 %}
+
+{% if servicePharmacy == 'true' %}
+  {% set count = count +1 %}
+{% endif %}
+
+{% if serviceGP == 'true' %}
+  {% set count = count +1 %}
+{% endif %}
+
+{% if serviceSexualHealthClinic == 'true' %}
+  {% set count = count +1 %}
+{% endif %}
+
+{% if serviceWalkInCentre == 'true' %}
+  {% set count = count +1 %}
+{% endif %}
+
+{% if serviceUrgentCareCentre == 'true' %}
+  {% set count = count +1 %}
+{% endif %}
+
+
+{% block page_title %}
+Stomach ache symptoms and conditions - NHS.UK
+{% endblock %}
+
+
+{% block pageTitle %}
+
+{{ pageTitle }}
+
+{% endblock %}
+
+{% block pageIntro %}
+
+{% endblock %}
+
+
+{% block content %}
+
+
+{% if introCopy %}
+  <p>{{ introCopy }}</p>
+{% endif %}
+
+
+<form action="show-list-of-services">
+
+  {% if condition == 'genital_warts' %}
+
+  <p>To find services close to you enter a location and select which services you'd like to visit.</p>
+
+
+  {% endif %}
+
+  <div id="locationField">
+  </div>
+
+
+<style>
+#autocomplete {
+  font-size: 20px;
+}
+
+
+.pac-container {
+  font-size: 40px !important;
+  color: #ff0000 !important;
+}
+
+
+.pac-item {
+  padding: 10px;
+
+}
+
+
+.pac-item, .pac-matched, .pac-item-query {
+  font-size: 20px !important;
+  /* text-decoration: underline; */
+
+}
+
+.pac-matched {
+  font-weight: 800;
+
+}
+
+.pac-item-query {
+  color: #000000;
+
+}
+
+.pac-item {
+  font-weight: 200;
+  color: #333333;
+
+}
+
+.pac-item:hover {
+  text-decoration: underline;
+}
+
+
+</style>
+
+<fieldset>
+  <legend><strong>Enter a location</strong></legend>
+  <div class="form-group">
+    <input id="autocomplete" placeholder=""
+           onFocus="geolocate()" type="text" name="userLocation"></input>
+
+    <p id="uselocation"><a href="javascript: getLocation()" style="margin-top:-32px;">Use my current location</a></p>
+  </div>
+</fieldset>
+
+{% if count > '1' %}
+
+<strong>Select services</strong>
+<p>
+{% if servicePharmacy == 'true' %}
+<input type="checkbox" checked>Pharmacy<br />
+{% endif %}
+{% if serviceGP == 'true' %}
+<input type="checkbox" checked>GP<br />
+{% endif %}
+{% if serviceSexualHealthClinic == 'true' %}
+<input type="checkbox" checked>Sexual health clinic<br />
+{% endif %}
+{% if serviceWalkInCentre == 'true' %}
+<input type="checkbox" checked>Walk-in Centre<br /></p>
+{% endif %}
+{% if serviceUrgentCareCentre == 'true' %}
+<input type="checkbox" checked>Urgent care centre<br /></p>
+{% endif %}
+
+</p>
+
+{% endif %}
+
+<input type="hidden" name="condition" value="{{ condition }}">
+<input type="hidden" name="conditionName" value="{{ conditionName }}">
+<input type="hidden" name="servicePharmacy" value="{{ servicePharmacy }}">
+<input type="hidden" name="serviceGP" value="{{ serviceGP }}">
+<input type="hidden" name="serviceWalkInCentre" value="{{ serviceWalkInCentre }}">
+<input type="hidden" name="serviceSexualHealthClinic" value="{{ serviceSexualHealthClinic }}">
+
+<button type="submit" class="button" style="margin-top: 0; margin-bottom: 0;">Search</button>
+
+
+  {% if showBackLink == 'true' %}
+  <p style="margin-top: 0;">
+    <a href="{{ backLink }}" class="link-back">Back to information on {{ conditionName }}</a>
+  </p>
+  {% elseif servicePharmacy == 'true' %}
+  <p style="margin-top: 0;">
+    <a href="pharmacies" class="link-back">Information on pharmacies</a>
+  </p>
+  {% elseif serviceGP == 'true' %}
+  <p style="margin-top: 0;">
+    <a href="GPs" class="link-back">Information on GPs</a>
+  </p>
+
+  {% endif %}
+
+
+</form>
+
+<script>
+  // This example displays an address form, using the autocomplete feature
+  // of the Google Places API to help users fill in the information.
+
+  // This example requires the Places library. Include the libraries=places
+  // parameter when you first load the API. For example:
+  // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+
+  var placeSearch, autocomplete;
+  var componentForm = {
+    street_number: 'short_name',
+    route: 'long_name',
+    locality: 'long_name',
+    administrative_area_level_1: 'short_name',
+    country: 'long_name',
+    postal_code: 'short_name'
+  };
+
+  function initAutocomplete() {
+    // Create the autocomplete object, restricting the search to geographical
+    // location types.
+    autocomplete = new google.maps.places.Autocomplete(
+        /** @type {!HTMLInputElement} */(document.getElementById('autocomplete')),
+        {types: ['geocode']});
+
+    // When the user selects an address from the dropdown, populate the address
+    // fields in the form.
+    autocomplete.addListener('place_changed', fillInAddress);
+  }
+
+  function fillInAddress() {
+    // Get the place details from the autocomplete object.
+    var place = autocomplete.getPlace();
+
+    for (var component in componentForm) {
+      document.getElementById(component).value = '';
+      document.getElementById(component).disabled = false;
+    }
+
+    // Get each component of the address from the place details
+    // and fill the corresponding field on the form.
+    for (var i = 0; i < place.address_components.length; i++) {
+      var addressType = place.address_components[i].types[0];
+      if (componentForm[addressType]) {
+        var val = place.address_components[i][componentForm[addressType]];
+        document.getElementById(addressType).value = val;
+      }
+    }
+  }
+
+  // Bias the autocomplete object to the user's geographical location,
+  // as supplied by the browser's 'navigator.geolocation' object.
+  function geolocate() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(function(position) {
+        var geolocation = {
+          lat: position.coords.latitude,
+          lng: position.coords.longitude
+        };
+        var circle = new google.maps.Circle({
+          center: geolocation,
+          radius: position.coords.accuracy
+        });
+        autocomplete.setBounds(circle.getBounds());
+      });
+    }
+  }
+</script>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhnTI6Uln_ujmSZehtWKqatAXSCUhrty8&libraries=places&callback=initAutocomplete"
+      async defer></script>
+
+
+
+{% endblock %}
+
+
+{% block emergencyContent %}
+
+
+{% endblock%}
+
+{% block mutedCallout%}
+
+
+{% endblock%}
+
+{% block body_after %}
+
+{% endblock %}

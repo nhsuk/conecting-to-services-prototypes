@@ -14,6 +14,7 @@ var config = require('./app/config.js')
 var index = require('./app/routes/index');
 var v1 = require('./app/routes/v1');
 var v2 = require('./app/routes/v2');
+var v2_1 = require('./app/routes/v2_1');
 var v3 = require('./app/routes/v3');
 
 var app = express()
@@ -80,6 +81,9 @@ env.addFilter('date', dateFilter);
 app.use('/', index);
 app.use('/v1', v1);
 app.use('/v2', v2);
+app.use('/v2_1', v2_1);
+app.use('/v3', v3);
+
 
 // auto render any view that exists
 app.get(/^\/([^.]+)$/, function (req, res) {
