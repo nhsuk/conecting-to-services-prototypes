@@ -92,11 +92,6 @@ var SearchForm = React.createClass({
             "Book an appointment with a GP"
           )
         ),
-        React.createElement(
-          "p",
-          null,
-          "Enter the name of your GP practice."
-        ),
 
         React.createElement(
           "div",
