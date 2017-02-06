@@ -2,12 +2,12 @@
 
 
 {% block page_title %}
-Book a GP appointment at Meanwood Group Practice
+Book a GP appointment at
 {% endblock %}
 
 
 {% block pageTitle %}
-Book a GP appointment at Meanwood Group Practice
+Book a GP appointment at {{ practiceName }}
 {% endblock %}
 
 {% block pageIntro %}
@@ -53,7 +53,7 @@ Book a GP appointment at Meanwood Group Practice
 
 
 <p><b>Book an appointment</b><br />
-Contact reception:  0113 230 5055</p>
+Contact reception:  {{ practiceTelephoneNumber }}</p>
 
 <p><b>Reception opening hours</b><br />
 Reception is open from 7.30am to 8pm
@@ -143,7 +143,7 @@ Reception is open from 7.30am to 8pm
 
 <p>If you don’t have a username and password, ask reception for a form to register for online services.</p>
 
-<p class="muted"><a href="https://patient.emisaccess.co.uk/Account/Login" style="margin-bottom: 0px;">Sign into the online services website</a>
+<p class="muted"><a href="{{ practiceOnlineAppointmentsLink }}" style="margin-bottom: 0px;">Sign into the online services website</a>
 </p>
 
 <p><a href="book-an-appointment" class="link-back" style="margin: 0;">Find your GP</a>

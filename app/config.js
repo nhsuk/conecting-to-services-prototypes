@@ -11,6 +11,8 @@ module.exports = {
     'Leeds'
   ],
   practicePostcode: 'LS8 1AY',
+  practiceTelephoneNumber: '0113 123 45678',
+  practiceOnlineAppointmentsLink : 'https://patient.emisaccess.co.uk/Account/Login',
 
   // Default port that prototype runs on
   port: '5000',

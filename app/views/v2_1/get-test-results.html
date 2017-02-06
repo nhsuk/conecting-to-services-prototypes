@@ -2,12 +2,12 @@
 
 
 {% block page_title %}
-Get test results from Meanwood Group Practice
+Get test results from {{ practiceName }}
 {% endblock %}
 
 
 {% block pageTitle %}
-Get test results from Meanwood Group Practice
+Get test results from {{ practiceName }}
 {% endblock %}
 
 {% block pageIntro %}
@@ -103,7 +103,9 @@ Get test results from Meanwood Group Practice
 
 <p>The service is open from 9am to 12.30pm Monday to Friday.</p>
 
-<p class="muted">01234 5678901 open now</p>
+<div class="muted">
+  <p style="padding: 0; margin: 0;">{{ practiceTelephoneNumber }}<br />Open now</p>
+</div>
 
 <a name="online"></a><h2>Get test results online</h2>
 
@@ -113,7 +115,7 @@ Get test results from Meanwood Group Practice
 
 <p>If something unusual has shown up in your test, the GP will ask to see you. This doesn’t mean you’re going to get bad news, so try not to worry.</p>
 
-<p><a href="https://patient.emisaccess.co.uk/Account/Login" class="button" style="margin-bottom: 0px;">Sign into the online services website</a>
+<p><a href="{{ practiceOnlineAppointmentsLink }}" class="button" style="margin-bottom: 0px;">Sign into the online services website</a>
 </p>
 
 <p><a href="javascript:history.back" class="link-back" style="margin: 0;">Back to GP practice information</a>

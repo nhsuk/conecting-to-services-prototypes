@@ -40,6 +40,10 @@ useHttps = useHttps.toLowerCase()
 app.use(function (req, res, next) {
   res.locals.serviceName = config.serviceName
   res.locals.practiceName = config.practiceName
+  res.locals.practiceAddress = config.practiceAddress
+  res.locals.practiceTelephoneNumber = config.practiceTelephoneNumber
+  res.locals.practicePostcode = config.practicePostcode
+  res.locals.practiceOnlineAppointmentsLink = config.practiceOnlineAppointmentsLink
   res.locals.cookieText = config.cookieText
   res.locals.regwithGPURL = config.regwithGPURL
   next()
