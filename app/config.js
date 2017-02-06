@@ -4,13 +4,13 @@
 
 module.exports = {
   serviceName: '',
-  practiceName: 'Bellbrooke Surgery',
+  practiceName: 'Woodhouse Medical Practice',
   practiceAddress: [
-    'Bellbrooke Avenue',
+    'Cambridge Road',
     'Leeds'
   ],
-  practicePostcode: 'LS9 6AU',
-  practiceTelephoneNumber: '0844 477 2502',
+  practicePostcode: 'LS6 2SF',
+  practiceTelephoneNumber: '0113 295 3510',
   practiceOnlineAppointmentsLink : 'https://patient.emisaccess.co.uk/Account/Login',
 
   // Default port that prototype runs on
