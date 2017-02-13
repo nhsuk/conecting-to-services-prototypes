@@ -1,50 +1,72 @@
-{% extends '_layouts/layout_2-3.html' %}
+{% extends '_layouts/layout_index.html' %}
 
 {% block page_title %}Index : {{serviceName}}{% endblock %}
 
 {% block pageTitle %}Prototypes{% endblock %}
 
-{% block pageIntro %}These is the design work for the Connecting to a GP digital service{% endblock%}
+{% block pageIntro %}<p>This is the design work for the nhs.uk's Connecting to a GP digital service.</p>
+<p>These are not live services.</p>{% endblock%}
 
-{% block content %}
-<h2>v3</h2>
-<h3>Find and see a GP journey</h3>
+{% block leftcontent %}
+
+<h2>Production candidates</h2>
+
+<h3>MVP for Book an Appointment with a GP</h3>
+<ul>
+  <li><a href="/mvp_v1/">Index</a> </li>
+</ul>
+
+{% endblock %}
+
+
+{% block rightcontent %}
+
+<h2>Exploration</h2>
+
+<h3>v3</h3>
+<h4>Find and see a GP journey</h4>
 Looking at user seeing/choosing an appointment.
 <ul>
 <!--    <li><a href="/v1/content_page_2-3">Standard content page, two-third grid</a></li>
   <li><a href="/v1/content_page_2-3_1-3">Standard content page, two-third/one-third grid</a></li>-->
-  <li><a href="/v3/">List of conditions</a> </li>
+  <li><a href="/expl_v3/">List of conditions</a> </li>
+</ul>
+
+<h3>v2.1</h3>
+<h4>Find and see a GP journey</h4>
+Like v2, just with some content changes for the lab on Monday 6 February.
+<ul>
+  <li><a href="/expl_v2_1/">List of conditions</a> </li>
 </ul>
 
 
-<h2>v2</h2>
-<h3>Find and see a GP journey</h3>
+
+<h3>v2</h3>
+<h4>Find and see a GP journey</h4>
 This is the very basic route: Users can 'find' a GP, and then see a page that tells them how to make an appointment.
 <ul>
-<!--    <li><a href="/v1/content_page_2-3">Standard content page, two-third grid</a></li>
-  <li><a href="/v1/content_page_2-3_1-3">Standard content page, two-third/one-third grid</a></li>-->
-  <li><a href="/v2/">List of conditions</a> </li>
+  <li><a href="/expl_v2/">List of conditions</a> </li>
 </ul>
 
 
-  <h2>v1</h2>
-  <h3>Find and see a GP journey</h3>
+  <h3>v1</h3>
+  <h4>Find and see a GP journey</h4>
   <ul>
 <!--    <li><a href="/v1/content_page_2-3">Standard content page, two-third grid</a></li>
     <li><a href="/v1/content_page_2-3_1-3">Standard content page, two-third/one-third grid</a></li>-->
-    <li><a href="/v1/d1/warts-and-verrucas">v1 / d1: Warts and verrucas</a> </li>
-    <li><a href="/v1/d2/warts-and-verrucas">v1 / d2: Warts and verrucas</a></li>
+    <li><a href="/expl_v1/d1/warts-and-verrucas">v1 / d1: Warts and verrucas</a> </li>
+    <li><a href="/expl_v1/d2/warts-and-verrucas">v1 / d2: Warts and verrucas</a></li>
   </ul>
   <h3>Find a pharmacy that will help my condition journey</h3>
   <ul>
-    <li><a href="/v1/d1/head-lice">v1 / d1: Head lice</a></li>
-    <li><a href="/v1/d2/head-lice">v1 / d2: Head lice</a></li>
+    <li><a href="/expl_v1/d1/head-lice">v1 / d1: Head lice</a></li>
+    <li><a href="/expl_v1/d2/head-lice">v1 / d2: Head lice</a></li>
   </ul>
 
-  <h3>Symptoms and conditions index</h3>
+  <h4>Symptoms and conditions index</h4>
   <ul>
-    <li><a href="/v1/d2/choose-journey">v1 / d2: Choose and start journey</a></li>
-    <li><a href="/v1/d2/index">v1 / d2: Symptoms and condition index</a></li>
+    <li><a href="/expl_v1/d2/choose-journey">v1 / d2: Choose and start journey</a></li>
+    <li><a href="/expl_v1/d2/index">v1 / d2: Symptoms and condition index</a></li>
   </ul>
 
 {% endblock %}

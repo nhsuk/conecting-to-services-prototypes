@@ -1,0 +1,71 @@
+{% extends '_layouts/layout_2-3_no_title_block.html' %}
+
+
+{% block page_title %}
+Stomach ache symptoms and conditions - NHS.UK
+{% endblock %}
+
+
+{% block pageTitle %}
+Book an appointment with a GP
+{% endblock %}
+
+{% block pageIntro %}
+
+{% endblock %}
+
+
+{% block content %}
+
+More random content
+
+<script>
+  var lookupURL = 'http://gp-lookup-demo.herokuapp.com';
+</script>
+<script src="/scripts/react.js"></script>
+<script src="/scripts/react-dom.js"></script>
+<script src="/scripts/gp-lookup/lookup.js"></script>
+<script src="/scripts/gp-lookup/components.js"></script>
+<script>
+  var submitPractice = function($el) {
+    var els = ''
+    els += '<input type="hidden" name="practice-name" value="' + $el.find('h2').text() + '" />'
+    els += '<input type="hidden" name="practice-address" value="' + $el.find('.address').text() + '" />'
+    $el.append(els);
+    $('#gp-results').submit();
+  }
+
+  $(function() {
+    $('#content').on('click', '.result', function() {
+      submitPractice($(this));
+    });
+    $('html').on('keyup', '.result', function(key) {
+      if (key.keyCode === 13) {
+        submitPractice($(key.target));
+      }
+    });
+  });
+</script>
+
+
+
+{% endblock %}
+
+
+{% block emergencyContent %}
+<p style="top-margin:16px;">
+  <b>If you haven't got a GP</b><br />
+  <a href="find-a-service?serviceprovider=GP">Find a GP in your area</a>
+</p>
+
+
+{% endblock%}
+
+{% block mutedCallout%}
+
+
+{% endblock%}
+
+{% block body_after %}
+
+{% endblock %}

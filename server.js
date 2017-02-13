@@ -12,10 +12,14 @@ var config = require('./app/config.js')
 
 // Add in versions variable here - and make sure you jump down to the app.use as well
 var index = require('./app/routes/index');
-var v1 = require('./app/routes/v1');
-var v2 = require('./app/routes/v2');
-var v2_1 = require('./app/routes/v2_1');
-var v3 = require('./app/routes/v3');
+
+var expl_v1 = require('./app/routes/expl_v1');
+var expl_v2 = require('./app/routes/expl_v2');
+var expl_v2_1 = require('./app/routes/expl_v2_1');
+var expl_v3 = require('./app/routes/expl_v3');
+
+var MVP_v1 = require('./app/routes/MVP_v1');
+
 
 var app = express()
 
@@ -83,10 +87,10 @@ env.addFilter('date', dateFilter);
 
 // app.use - need to make sure you add in the version route here as well, yo
 app.use('/', index);
-app.use('/v1', v1);
-app.use('/v2', v2);
-app.use('/v2_1', v2_1);
-app.use('/v3', v3);
+app.use('/expl_v1', expl_v1);
+app.use('/expl_v2', expl_v2);
+app.use('/expl_v2_1', expl_v2_1);
+app.use('/expl_v3', expl_v3);
 
 
 // auto render any view that exists
