@@ -17,6 +17,7 @@ var expl_v1 = require('./app/routes/expl_v1');
 var expl_v2 = require('./app/routes/expl_v2');
 var expl_v2_1 = require('./app/routes/expl_v2_1');
 var expl_v3 = require('./app/routes/expl_v3');
+var expl_v4 = require('./app/routes/expl_v4');
 
 var MVP_v1 = require('./app/routes/MVP_v1');
 
