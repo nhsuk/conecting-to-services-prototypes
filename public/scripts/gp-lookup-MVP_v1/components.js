@@ -125,7 +125,7 @@ var BackLink = React.createClass({
       React.createElement(
         "a",
         { href: "diabetes", className: "button -back" },
-        "Back"
+        "Back to type 2 diabates"
       )
     );
   },
