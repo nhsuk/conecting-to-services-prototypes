@@ -95,14 +95,42 @@ var SearchForm = React.createClass({
         React.createElement(
           "p",
           { className: "" },
-            "You must LINK register with a GP surgery before you can book an appointment."
+            "You can book an appointment if you’re a registered patient with a GP."
         ),
         React.createElement(
           "p",
           { className: "" },
-            "If you’re already a registered patient, enter the name of your GP surgery."
+            "Enter the name of your GP surgery to see your booking options. You can only search using your surgery name."
         ),
 
+        React.createElement(
+          "p",
+          { className: "" },
+            "If you’re not a registered patient, you can"
+        ),
+
+        React.createElement(
+          "ul",
+          null,
+          React.createElement(
+            "li",
+            null,
+            React.createElement(
+              "a",
+              { href: "#link" },
+              "find a GP surgery near to you"
+            )
+          ),
+          React.createElement(
+            "li",
+            null,
+            React.createElement(
+              "a",
+              { href: "#link" },
+              "register as a permanent or temporary patient"
+            )
+          ),
+        ),
 
 
         React.createElement(
@@ -116,7 +144,9 @@ var SearchForm = React.createClass({
             { className: "button" },
             "Search"
           )
-        )
+        ),
+
+
       )
     );
   },

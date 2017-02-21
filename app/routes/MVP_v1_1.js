@@ -11,14 +11,14 @@ var naturalSort = require('javascript-natural-sort')
 // Start page ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 router.get('/start', function (req, res) {
   req.session.destroy();
-  res.render('MVP_v1/start', {
+  res.render('MVP_v1_1/start', {
     suppressServiceName: true
   });
 });
 
 // Name ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 router.get('/example', function (req, res) {
-  res.render('MVP_v1/example', {
+  res.render('MVP_v1_1/example', {
     session: req.session
   });
 });
@@ -27,7 +27,7 @@ router.get('/google-search', function (req, res) {
 
   var searchTerm = req.query.searchTerm;
 
-  res.render('MVP_v1/google-search', {
+  res.render('MVP_v1_1/google-search', {
     searchTerm: searchTerm
     });
 
@@ -40,7 +40,7 @@ router.get('/google-results', function (req, res) {
   var searchTerm = req.query.searchTerm;
 //  process.stdout.write("HAI THERE");
 
-  res.render('MVP_v1/google-results', {
+  res.render('MVP_v1_1/google-results', {
     searchTerm: searchTerm
     });
 
@@ -57,7 +57,7 @@ router.get('/find-a-service', function (req, res) {
 
 //  process.stdout.write("HAI THERE");
 
-  res.render('MVP_v1/find-a-service', {
+  res.render('MVP_v1_1/find-a-service', {
     condition: condition,
     servicePharmacy: servicePharmacy,
     serviceGP: serviceGP
@@ -75,12 +75,12 @@ router.get('/check-location', function (req, res) {
 
   if (req.query.postcode === '') {
 
-    res.render('MVP_v1/find-a-service', {
+    res.render('MVP_v1_1/find-a-service', {
       condition: condition,
       error: "NEED POSTCODE ERROR"
     });
   } else {
-    res.render('MVP_v1/show-list-of-services');
+    res.render('MVP_v1_1/show-list-of-services');
   }
 
 });
@@ -109,7 +109,7 @@ router.get('/show-list-of-services', function (req, res) {
 
   if (serviceGP == 'true') {
 
-    var GPData = require('../views/MVP_v1/data_files/data_gp_LS.json');
+    var GPData = require('../views/MVP_v1_1/data_files/data_gp_LS.json');
 
 //    console.log("--------------GP info --------");
 //      for (var i = 0; i < GPData.length; ++i) {
@@ -144,7 +144,7 @@ router.get('/show-list-of-services', function (req, res) {
 
   if (servicePharmacy == 'true') {
 
-    var pharmaciesData = require('../views/MVP_v1/data_files/data_pharmacies_LS.json');
+    var pharmaciesData = require('../views/MVP_v1_1/data_files/data_pharmacies_LS.json');
 
 //    console.log("--------------Pharmacies info --------");
 //      for (var i = 0; i < pharmaciesData.length; ++i) {
@@ -180,7 +180,7 @@ router.get('/show-list-of-services', function (req, res) {
 
     if (serviceSexualHealthClinic == 'true') {
 
-      var sexualhealthclinicData = require('../views/MVP_v1/data_files/data_sexualhealthclinic_LS.json');
+      var sexualhealthclinicData = require('../views/MVP_v1_1/data_files/data_sexualhealthclinic_LS.json');
 
   //    console.log("--------------Pharmacies info --------");
   //      for (var i = 0; i < pharmaciesData.length; ++i) {
@@ -214,7 +214,7 @@ router.get('/show-list-of-services', function (req, res) {
       }
 
 
-  res.render('MVP_v1/show-list-of-services', {
+  res.render('MVP_v1_1/show-list-of-services', {
     time: time,
     comment: comment,
     //parsedGPdata: parsedGPdata,
@@ -260,7 +260,7 @@ router.get('/book-an-appointment-online', function (req, res) {
 
 //  process.stdout.write("HAI THERE");
 
-  res.render('MVP_v1/book-an-appointment-online', {
+  res.render('MVP_v1_1/book-an-appointment-online', {
     GPsurgeryName: GPsurgeryName
     });
 
@@ -298,7 +298,7 @@ router.post('/name', function (req, res) {
   }
 
   if (passed === false) {
-    res.render('MVP_v1/name', {
+    res.render('v2/name', {
       errors,
       session: req.session
     });

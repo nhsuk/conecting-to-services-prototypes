@@ -1,0 +1,116 @@
+[
+  {
+    "website": "",
+    "sub_type": "UNKNOWN",
+    "postcode": "LS2 8NG",
+    "phone": "0113 392 0333",
+    "partial_postcode": "LS2",
+    "parent_o_d_s_code": "",
+    "parent_name": "",
+    "organisation_type": "GP",
+    "organisation_status": "Visible",
+    "organisation_id": "3896",
+    "organisation_code": "B82031",
+    "name": "The Centre for Sexual Health",
+    "longitude": "-1.2137000560760498",
+    "latlong": {
+      "type": "Point",
+      "crs": {
+        "type": "name",
+        "properties": {
+          "name": "EPSG4326"
+        }
+      },
+      "coordinates": [
+        -1.2137000560760498,
+        53.85515594482422
+      ]
+    },
+    "latitude": "53.855155944824219",
+    "is_pims_managed": "True",
+    "is_e_p_s_enabled": "False",
+    "fax": "",
+    "email": "",
+    "county": "",
+    "city": "",
+    "address3": "",
+    "address2": "50 Merrion Way",
+    "address1": "Merrion Shopping Centre"
+  },
+  {
+    "website": "http://www.sherburnsurgery.org.uk",
+    "sub_type": "UNKNOWN",
+    "postcode": "LS24 9DJ",
+    "phone": "01977 682208",
+    "partial_postcode": "LS24",
+    "parent_o_d_s_code": "03Q",
+    "parent_name": "NHS Vale Of York CCG",
+    "organisation_type": "GP",
+    "organisation_status": "Visible",
+    "organisation_id": "3896",
+    "organisation_code": "B82031",
+    "name": "Sherburn Group Practice",
+    "longitude": "-1.2137000560760498",
+    "latlong": {
+      "type": "Point",
+      "crs": {
+        "type": "name",
+        "properties": {
+          "name": "EPSG4326"
+        }
+      },
+      "coordinates": [
+        0,
+        0
+      ]
+    },
+    "latitude": "53.855155944824219",
+    "is_pims_managed": "True",
+    "is_e_p_s_enabled": "False",
+    "fax": "",
+    "email": "",
+    "county": "",
+    "city": "",
+    "address3": "",
+    "address2": "Ulleskelf",
+    "address1": "The Methodist Chapel"
+  },
+  {
+    "website": "http://www.regentstreetclinic.co.uk",
+    "sub_type": "UNKNOWN",
+    "postcode": "LS1 2NE",
+    "phone": "01977 682208",
+    "partial_postcode": "LS1",
+    "parent_o_d_s_code": "",
+    "parent_name": "",
+    "organisation_type": "Sexual health clinic",
+    "organisation_status": "",
+    "organisation_id": "",
+    "organisation_code": "",
+    "name": "Regent Street Clinic",
+    "longitude": "",
+    "latlong": {
+      "type": "Point",
+      "crs": {
+        "type": "name",
+        "properties": {
+          "name": "EPSG4326"
+        }
+      },
+      "coordinates": [
+        0,
+        0
+      ]
+    },
+    "latitude": "53.855155944824219",
+    "is_pims_managed": "True",
+    "is_e_p_s_enabled": "False",
+    "fax": "",
+    "email": "",
+    "county": "",
+    "city": "",
+    "address3": "",
+    "address2": "",
+    "address1": "4 Park Square E"
+  }
+]

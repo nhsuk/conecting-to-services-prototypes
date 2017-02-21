@@ -1,0 +1,118 @@
+{% extends '_layouts/journey_layout_2-3.html' %}
+
+
+{% block page_title %}
+Repeat prescriptions from {{ practiceName }}
+{% endblock %}
+
+
+{% block pageTitle %}
+Get a repeat prescription from {{ practiceName }}
+{% endblock %}
+
+{% block pageIntro %}
+<nav role="navigation" aria-label="Parts to this guide" class="link-list__row">
+
+ <ul class="link-list  link-list--one-half link-list--numbered" start="1">
+
+     <li class="link-list--item">
+
+         <a href="#who"
+            class="link_reverse-polarity"
+            title="Who can order a repeat prescription"
+            data-analytics="contents-navigation"
+            data-step="1">
+            Who can order a repeat prescription
+         </a>
+
+     </li>
+
+     <li class="link-list--item">
+
+         <a href="#contact"
+            class="link_reverse-polarity"
+            title="Contact reception"
+            data-analytics="contents-navigation"
+            data-step="2">
+            Contact reception
+         </a>
+
+     </li>
+
+
+     <li class="link-list--item">
+
+         <a href="#register"
+            class="link_reverse-polarity"
+            title="Register for the electronic prescription service"
+            data-analytics="contents-navigation"
+            data-step="3">
+            Register for the electronic prescription service
+          </a>
+
+     </li>
+
+
+ </ol>
+
+ </nav>
+
+{% endblock %}
+
+
+{% block content %}
+
+<a name="who"></a><h2>Who can order a repeat prescription</h2>
+
+
+<p>You can order a repeat prescription if a GP has:</p>
+
+<ul>
+  <li>prescribed you medication for a health problem before</li>
+  <li>said that you need to take the medication regularly</li>
+  <li>put the medication on your repeat prescription list</li>
+</ul>
+
+<p>Your GP will tell you how often you can get a repeat prescription. You won’t be able to get a repeat prescription more often than that.</p>
+
+
+<a name="contact"></a><h2>Contact reception</h2>
+
+<p>You can call reception to ask for medication that is on your repeat prescription list.</p>
+
+<div class="muted">
+  <p style="padding: 0; margin: 0;">{{ practiceTelephoneNumber }}<br />Open now</p>
+</div>
+
+
+<a name="register"></a><h2>Get a repeat prescription online</h2>
+
+<p>You can use this service to ask the surgery to:</p>
+
+<ul>
+  <li>prepare your repeat prescription</li>
+  <li>leave the prescription on reception for you to pick up</li>
+  <li>nominate a pharmacy that you would like to pick up the prescription from</li>
+  <li>send a repeat prescription to a pharmacy you’ve nominated before</li>
+</ul>
+
+<p><a href="{{ practiceOnlineAppointmentsLink }}" class="button" style="margin-bottom: 0px;">Sign into the online services website</a>
+</p>
+
+
+{% endblock %}
+
+
+{% block emergencyContent %}
+
+
+{% endblock%}§
+
+{% block mutedCallout%}
+
+
+{% endblock%}
+
+{% block body_after %}
+
+{% endblock %}
