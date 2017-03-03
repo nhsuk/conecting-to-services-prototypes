@@ -1,0 +1,200 @@
+{% extends '_layouts/journey_layout_2-3.html' %}
+
+
+{% block page_title %}
+Book a GP appointment at
+{% endblock %}
+
+
+{% block pageTitle %}
+Book a GP appointment at {{ practiceName }}
+{% endblock %}
+
+{% block pageIntro %}
+<nav role="navigation" aria-label="Parts to this guide" class="link-list__row">
+
+
+ <ul class="link-list  link-list--one-half link-list--numbered" start="1">
+
+
+     <li class="link-list--item">
+
+         <a href="#online"
+            class="link_reverse-polarity"
+            title="Book an appointment online"
+            data-analytics="contents-navigation"
+            data-step="1">
+           Book an appointment online
+         </a>
+
+     </li>
+
+
+     <li class="link-list--item">
+
+         <a href="#otherways"
+            class="link_reverse-polarity"
+            title="Book an appointment online"
+            data-analytics="contents-navigation"
+            data-step="2">
+           Other ways to book
+         </a>
+
+     </li>
+
+
+     <li class="link-list--item">
+
+         <a href="#whensee"
+            class="link_reverse-polarity"
+            title="Book an appointment online"
+            data-analytics="contents-navigation"
+            data-step="3">
+            When GPs see patients
+         </a>
+
+     </li>
+
+     <li class="link-list--item">
+
+         <a href="#whenclosed"
+            class="link_reverse-polarity"
+            title="Book an appointment online"
+            data-analytics="contents-navigation"
+            data-step="4">
+            What to do when the surgery is closed
+         </a>
+
+     </li>
+
+
+ </ul>
+
+ </nav>
+
+
+{% endblock %}
+
+
+{% block content %}
+
+
+<a name="online"></a><h2 style="margin-top:32px;">Book an appointment online</h2>
+
+<p>You can book an appointment online if:</p>
+
+<ul>
+  <li>you’re a registered patient with this surgery</li>
+  <li>you have a username and password for this surgery’s online services website</li>
+</ul>
+
+
+<p>If you don’t have a username and password, ask reception for a form to register for online services.</p>
+
+<p class="muted"><a href="{{ practiceOnlineAppointmentsLink }}" style="margin-bottom: 0px;">Sign into the online services website</a>
+</p>
+
+
+<a name="otherways"></a><h2>Other ways to book</h2>
+
+
+<p>Visit the surgery’s website to find out about other ways to book an appointment. Or contact reception on {{ practiceTelephoneNumber }}</p>
+
+<p><b>Reception times</b><br />
+Reception is open from 7am to 6pm
+</p>
+
+<details style="margin-top: 0;margin-bottom: 0;">
+
+<summary><span class="nearest_opening_times">See reception opening times</span></summary>
+
+  <div class="panel panel-border-narrow">
+
+
+    <table class="gpOpeningTimes">
+        <tbody>
+            <tr>
+                <td>Monday</td>
+                <td>7.30am to 8pm</td>
+            </tr>
+            <tr>
+                <td>Tuesday</td>
+                <td>8am to 6pm</td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td>7.30am to 6pm</td>
+            </tr>
+            <tr>
+                <td>Thursday</td>
+                <td>8am to 6pm</td>
+            </tr>
+            <tr>
+                <td>Friday</td>
+                <td>8am to 6pm</td>
+            </tr>
+        </tbody>
+    </table>
+
+  </div>
+
+</details>
+<p></p>
+
+
+<a name="whensee"></a><h2>When GPs see patients at this surgery</h2>
+
+
+    <table class="gpOpeningTimes">
+        <tbody>
+            <tr>
+                <td>Monday</td>
+                <td>7.30am to 8pm</td>
+            </tr>
+            <tr>
+                <td>Tuesday</td>
+                <td>7.30am to 6pm</td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td>7.30am to 6pm</td>
+            </tr>
+            <tr>
+                <td>Thursday</td>
+                <td>7.30am to 6pm</td>
+            </tr>
+            <tr>
+                <td>Friday</td>
+                <td>7.30am to 6pm</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <a name="whenclosed"></a><h2>What to do when the surgery is closed</h2>
+
+<p>When the surgery is closed, you can still <a href="#online">book an appointment online</a>.</p>
+
+<p>If you think you need to see someone more urgently, call 111 for advice on where to get help.</p>
+
+<p><a href="book-an-appointment" class="link-back" style="margin: 0;">Find your GP</a>
+</p>
+
+
+
+{% endblock %}
+
+
+{% block emergencyContent %}
+
+
+{% endblock%}§
+
+{% block mutedCallout%}
+
+
+{% endblock%}
+
+{% block body_after %}
+
+{% endblock %}
