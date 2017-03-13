@@ -1,0 +1,165 @@
+{% extends '_layouts/journey_layout_2-3.html' %}
+
+
+{% block page_title %}
+GP details NHS.UK
+{% endblock %}
+
+
+{% block pageTitle %}
+Book an appointment at {{ practiceName }}
+{% endblock %}
+
+{% block pageIntro %}
+<nav role="navigation" aria-label="Parts to this guide" class="link-list__row">
+
+ <ul class="link-list  link-list--one-half link-list--numbered" start="1">
+
+     <li class="link-list--item">
+
+         <a href="#reception"
+            class="link_reverse-polarity"
+            title="Contact reception"
+            data-analytics="contents-navigation"
+            data-step="1">
+           Contact reception
+         </a>
+
+     </li>
+
+     <li class="link-list--item">
+
+         <a href="#online"
+            class="link_reverse-polarity"
+            title="Book an appointment online"
+            data-analytics="contents-navigation"
+            data-step="2">
+           Book an appointment online
+         </a>
+
+     </li>
+
+ </ol>
+
+ </nav>
+
+
+
+
+{% endblock %}
+
+
+{% block content %}
+
+<a name="reception"></a><h2>Contact reception</h2>
+
+
+<p><b>Book an appointment</b><br />
+Contact reception:  {{ practiceTelephoneNumber }}</p>
+
+<p><b>Reception opening hours</b><br />
+Reception is open from 7.30am to 8pm
+</p>
+
+<details style="margin-top: 0;margin-bottom: 0;">
+
+<summary><span class="nearest_opening_times">See all opening times</span></summary>
+
+  <div class="panel panel-border-narrow">
+
+
+    <table class="gpOpeningTimes">
+        <tbody>
+            <tr>
+                <td>Monday</td>
+                <td>7.30am to 8pm</td>
+            </tr>
+            <tr>
+                <td>Tuesday</td>
+                <td>8am to 6pm</td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td>7.30am to 6pm</td>
+            </tr>
+            <tr>
+                <td>Thursday</td>
+                <td>8am to 6pm</td>
+            </tr>
+            <tr>
+                <td>Friday</td>
+                <td>8am to 6pm</td>
+            </tr>
+        </tbody>
+    </table>
+
+  </div>
+
+</details>
+
+<p><b>GP appointment times</b><br />
+  You can book an appointment up to 4 weeks in advance.</p>
+
+
+    <table class="gpOpeningTimes">
+        <tbody>
+            <tr>
+                <td>Monday</td>
+                <td>7.30am to 8pm</td>
+            </tr>
+            <tr>
+                <td>Tuesday</td>
+                <td>7.30am to 6pm</td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td>7.30am to 6pm</td>
+            </tr>
+            <tr>
+                <td>Thursday</td>
+                <td>7.30am to 6pm</td>
+            </tr>
+            <tr>
+                <td>Friday</td>
+                <td>7.30am to 6pm</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+<p>You can also ask for a late appointment between 6pm and 8pm on Wednesdays and Thursdays.</p>
+
+<p>The surgery has telephone appointments available, Monday to Friday 7.30am to 9am.</p>
+
+
+
+<a name="online"></a><h2 style="margin-top:32px;">Book an appointment online</h2>
+
+<p>You can book appointments online for a  registered patient at this practice.</p>
+
+<p>Not all appointments are available online.</p>
+
+<p>If you can’t find a convenient appointment, call reception to find out what other appointments are available.</p>
+
+<p class="muted"><a href="see-online-appointments" style="margin-bottom: 0px;">See available appointments</a>
+</p>
+
+<p><a href="book-an-appointment" class="link-back" style="margin: 0;">Find your GP</a>
+</p>
+
+{% endblock %}
+
+
+{% block emergencyContent %}
+
+
+{% endblock%}§
+
+{% block mutedCallout%}
+
+
+{% endblock%}
+
+{% block body_after %}
+
+{% endblock %}

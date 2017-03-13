@@ -1,0 +1,61 @@
+{% extends '_layouts/layout_2-3_no_title_block.html' %}
+
+
+{% block page_title %}
+Book an appointment - NHS.UK
+{% endblock %}
+
+
+{% block pageTitle %}
+What's the name of your GP surgery?
+{% endblock %}
+
+{% block pageIntro %}
+
+{% endblock %}
+
+
+{% block content %}
+
+
+
+<p>You can only search for surgeries in England.</p>
+
+
+<form action="show-list-of-pharmacies-with-full-times-v3-2">
+
+<fieldset>
+  <div class="form-group">
+    <input type="text" size="30" name="postcode">
+  </div>
+</fieldset>
+
+<a href="show-list-of-gps" type="submit" class="button" style="margin-top: -32px; margin-bottom: 0;">Next</a>
+
+</form>
+
+<details style="margin-top: 64px ;margin-bottom: 0;">
+
+<summary style="color:#0072c6;"><span class="nearest_opening_times" style="text-decoration: underline;">I am not registered to use GP surgery's online services</span></summary>
+
+<p class="muted">Something here about how you can.</p>
+
+</details>
+
+
+{% endblock %}
+
+
+{% block emergencyContent %}
+
+{% endblock%}
+
+
+{% block mutedCallout%}
+
+{% endblock%}
+
+
+{% block body_after %}
+
+{% endblock %}

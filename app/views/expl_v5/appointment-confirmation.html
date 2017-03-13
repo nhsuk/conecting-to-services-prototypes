@@ -1,0 +1,53 @@
+{% extends '_layouts/journey_layout_2-3_no_blue_box.html' %}
+
+
+{% block page_title %}
+GP details NHS.UK
+{% endblock %}
+
+
+{% block pageTitle %}
+Booking confirmation
+{% endblock %}
+
+{% block pageIntro %}
+
+{% endblock %}
+
+
+{% block content %}
+
+<p><b>You’ve booked this appointment</b></p>
+
+<p class="info-panel">10am today with Dr Angela Carter</p>
+
+<p><b>We’ll send a text to remind you</b><br />
+  We’ll send the text to a mobile phone number ending in: 7205. This is the telephone number we have on the patient’s records.</p>
+
+<p>Call reception if you think we have the wrong telephone number.</p>
+
+<p><b>To cancel the appointment</b><br />
+
+Reply to the text using the word ‘cancel’.</p>
+
+<p><b>To change the appointment</b><br />
+Call reception: {{ practiceTelephoneNumber }}</p>
+
+
+
+{% endblock %}
+
+
+{% block emergencyContent %}
+
+
+{% endblock%}§
+
+{% block mutedCallout%}
+
+
+{% endblock%}
+
+{% block body_after %}
+
+{% endblock %}

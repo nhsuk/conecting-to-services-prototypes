@@ -1,0 +1,100 @@
+{% extends '_layouts/journey_layout_2-3_no_blue_box.html' %}
+
+
+{% block page_title %}
+GP details NHS.UK
+{% endblock %}
+
+
+{% block pageTitle %}
+Who is this appointment for?
+{% endblock %}
+
+{% block pageIntro %}
+
+{% endblock %}
+
+
+{% block content %}
+
+
+<h2>Your appointment</h2>
+
+<p class="info-panel">Seeing Dr Angela Carter at 10.10am today</p>
+
+<p>You can only book appointments for a registered patient.</p>
+
+<form>
+
+  <fieldset>
+    <legend>Patient's first name</legend>
+    <div class="form-group">
+      <input type="text" id="first-name" name="first-name" value="" class="text">
+    </div>
+  </fieldset>
+
+<fieldset>
+  <legend>Patient's last name</legend>
+  <div class="form-group">
+    <input type="text" id="last-name" name="last-name" value="" class="text">
+  </div>
+</fieldset>
+
+<fieldset>
+  <legend>
+    Patient's date of birth?
+    <span class="form-hint">
+      For example: 31/12/1980
+    </span>
+  </legend>
+  <div class="form-group -date">
+    <div>
+      <label for="dob-day">Day</label>
+      <input type="text" id="dob-day" name="dob-day" value="" class="day">
+    </div>
+    <div>
+      <label for="dob-month">Month</label>
+      <input type="text" id="dob-month" name="dob-month" value="" class="month">
+    </div>
+    <div>
+      <label for="dob-year">Year</label>
+      <input type="text" id="dob-year" name="dob-year" value="" class="year">
+    </div>
+  </div>
+</fieldset>
+
+<fieldset>
+  <legend>Patient's postcode</legend>
+  <div class="form-group">
+    <input type="text" id="first-name" name="first-name" value="" class="postcode" style="width:200px;">
+  </div>
+</fieldset>
+
+
+</form>
+
+
+<p><a href="review-appointment" class="button">Next</a></p>
+
+
+<a href="see-online-appointments" class="link-back" style="margin: 0;">Choose an appointment</a>
+</p>
+
+
+
+{% endblock %}
+
+
+{% block emergencyContent %}
+
+
+{% endblock%}§
+
+{% block mutedCallout%}
+
+
+{% endblock%}
+
+{% block body_after %}
+
+{% endblock %}

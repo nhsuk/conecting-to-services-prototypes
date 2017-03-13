@@ -1,0 +1,221 @@
+{% extends '_layouts/layout_3-3_no_title.html' %}
+
+
+{% block page_title %}
+Pharmacy nearest to LS6 4JN open now
+{% endblock %}
+
+
+{% block pageIntro %}
+
+{% endblock %}
+
+
+{% block content %}
+
+{% set servicesToDisplay = '' %}
+{% set servicesCount = 0 %}
+
+{% if serviceGP == 'true' %}
+  {% set servicesToDisplay = servicesToDisplay + 'GP surgeries' %}
+    {% if servicesCount >0 %}
+      {% set servicesToDisplay = servicesToDisplay + ", " %}
+    {% endif %}
+  {% set servicesCount = servicesCount + 1 %}
+{% endif %}
+
+{% if servicePharmacy == 'true' %}
+{% if servicesCount >0 %}
+  {% set servicesToDisplay = servicesToDisplay + ", " %}
+{% endif %}
+  {% set servicesToDisplay = servicesToDisplay + 'Pharmacies' %}
+  {% set servicesCount = servicesCount + 1 %}
+{% endif %}
+
+{% set show_just_list = 'false' %}
+
+{% if condition == "genital_warts" %}
+  {% set show_just_list = 'true' %}
+{% endif %}
+
+
+<div style="margin: 0; padding-bottom: 32px; margin-top: 0;"><a href="find-a-service?condition={{ condition }}" class="link-back" style="margin: 0;">Back to enter a location</a></div>
+
+<!--<p><pre>Time: {{ time }}</pre></p>-->
+
+{% if show_just_list == "false" %}
+<div style="border: #0072C6 solid 16px; color:#000000;">
+  <div style="background: #0072C6; padding: 16px 0 32px 16px; color: #ffffff;">
+{% endif %}
+
+<h2>
+{% if condition == 'genital_warts' %}
+NHS help near to {{ postcode }} for genital warts
+{% else %}
+  {{ servicesToDisplay }} nearest {{ postcode }} open now
+{% endif %}
+</h2>
+</div>
+<div class="grid-row">
+<div class="grid-2-3" style="margin-left: {% if show_just_list == "true" %}-32px{% else %}-8px{% endif%}; padding: 32px; ">
+
+
+<p>0.2 miles away<br />
+  <h2 style="margin-top:-48px;">{{ resultName0 }}</h2></p>
+
+  <div style="border-left: #000 solid 8px; color: #000000; background: #ccc; padding: 16px; margin-top:0;">Open from 7.30am until 5.30pm today<br />
+    <details style="margin-top: 8px; margin-bottom: 0; margin-left: 0;">
+
+      <summary><span class="nearest_opening_times" style="margin-botton: 16px; text-decoration: underline;">View all opening times</span></summary>
+
+
+        <table class="serviceproviderOpeningTimes">
+            <tbody>
+                <tr>
+                    <td>Monday</td>
+                    <td>8.30am to 6pm</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Tuesday</td>
+                    <td>8.30am to 6pm</td>
+                    <td></td>
+                </tr>
+                <tr class="serviceproviderOpeningTimes">
+                    <td>Wednesday</td>
+                    <td>8.30am to 6pm</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Thursday</td>
+                    <td>8.30am to 1pm</td>
+                    <td>3.15pm to 6pm</td>
+                </tr>
+                <tr>
+                    <td>Friday</td>
+                    <td>8.30am to 6pm</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Saturday</td>
+                    <td>Closed</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Sunday</td>
+                    <td>Closed</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+
+
+    </details>
+
+  </div>
+
+  <div style="margin-top:32px;">{{ address0_1 }}
+  {% if address0_2 == 'true' %}
+<br />
+{{ address0_2 }}{% endif %}<br />
+{{ postcode0 }}
+</div>
+
+<div style="margin-top: 0;"><a  href="https://www.google.com/maps?saddr=LS6+4JN&daddr=LloydsPharmacy,569-571+Meanwood+Road,Leeds,Leeds,West+Yorkshire,LS6+4AY&near=LloydsPharmacy,569-571+Meanwood+Road,Leeds,Leeds,West+Yorkshire,LS6+4AY">See map and directions</a></div>
+
+{% if serviceGP == 'true' %}
+  <div style="margin-top: 32px;"><a href="book-an-appointment-online?GPsurgeryName={{ resultName0 }}">Book a GP appointment online</a></div>
+{% endif %}
+<div{% if serviceGP == ''%} style="margin-top: 32px;"{% endif %}>Phone {{ phone0 }}</div>
+
+</div>
+
+{% if show_just_list == "false" %}
+
+</div>
+</div>
+
+{% endif %}
+
+{% if show_just_list == "true" %}
+<hr style="margin-top: 32px; margin-bottom:16px;">
+{% endif %}
+
+<br />
+
+<div class="grid-row">
+<div class="grid-2-3" style="margin-left: -16px;">
+
+<h2>Other {{ servicesToDisplay }} near to LS6 4JN</h3>
+
+<p>0.4 miles away<br />
+  <h2 style="margin-top:-48px;">{{ resultName1 }}</h2></p>
+
+  <p style="border-left: #000000 solid 8px; background: #ccc; padding: 16px; margin-top:0;">Open from 7.30am until 5.30pm today</p>
+
+
+  <p style="margin-top:0;">{{ address1_1 }}
+  {% if address1_2 == 'true' %}
+<br />
+{{ address1_2 }}{% endif %}<br />
+{{ postcode1 }}</p>
+
+
+<p style="margin-top: -32px; margin-top: -24px;"><a href="https://www.google.com/maps?saddr=LS6+4JN&daddr=LloydsPharmacy,569-571+Meanwood+Road,Leeds,Leeds,West+Yorkshire,LS6+4AY&near=LloydsPharmacy,569-571+Meanwood+Road,Leeds,Leeds,West+Yorkshire,LS6+4AY">See map and directions</a></p>
+
+{% if serviceGP == 'true' %}
+  <div style="margin-top: 32px;"><a href="book-an-appointment-online?GPsurgeryName={{ resultName1 }}">Book a GP appointment online</a></div>
+{% endif %}
+<div{% if serviceGP == ''%} style="margin-top: 32px;"{% endif %}>Phone {{ phone1 }}</div>
+
+
+<hr style="margin-top: 32px; margin-bottom:64px;">
+
+<p>0.7 miles away<br />
+  <h2 style="margin-top:-48px;">{{ resultName2 }}</h2></p>
+
+  <p style="border-left: #000000 solid 8px; background: #ccc; padding: 16px; margin-top:0;">Open from 8am until 6pm today</p>
+
+
+  <p style="margin-top:0;">{{ address2_1 }}
+  {% if address2_2 == 'true' %}
+<br />
+{{ address2_2 }}{% endif %}<br />
+{{ postcode2 }}</p>
+
+
+<p style="margin-top: -32px; margin-top: -24px;"><a href="https://www.google.com/maps?saddr=LS6+4JN&daddr=Meanwood+Pharmacy,597+Meanwood+Road,Leeds,West+Yorkshire,LS6+4AY&near=Meanwood+Pharmacy,597+Meanwood+Road,Leeds,West+Yorkshire,LS6+4AY">See map and directions</a></p>
+
+{% if serviceGP == 'true' %}
+  <div style="margin-top: 32px;"><a href="book-an-appointment-online?GPsurgeryName={{ resultName2 }}">Book a GP appointment online</a></div>
+{% endif %}
+<div{% if serviceGP == ''%} style="margin-top: 32px;"{% endif %}>Phone {{ phone0 }}</div>
+
+
+<hr style="margin-top: 32px; margin-bottom:64px;">
+
+
+<p><a href="something-is-wrong">Is something wrong with this page?</a></p>
+
+</div>
+</div>
+
+
+
+
+{% endblock %}
+
+
+{% block emergencyContent %}
+
+
+{% endblock%}
+
+{% block mutedCallout%}
+
+
+{% endblock%}
+
+{% block body_after %}
+
+{% endblock %}

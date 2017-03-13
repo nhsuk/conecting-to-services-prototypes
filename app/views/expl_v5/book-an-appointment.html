@@ -1,0 +1,54 @@
+{% extends '_layouts/layout_2-3_no_title_block.html' %}
+
+
+{% block page_title %}
+Book an appointment - NHS.UK
+{% endblock %}
+
+
+{% block pageTitle %}
+Book a GP appointment online
+{% endblock %}
+
+{% block pageIntro %}
+
+{% endblock %}
+
+
+{% block content %}
+
+<p>To go to your doctor's online booking system, enter the name of your surgery. You can:</p>
+
+<ul>
+  <li>search for part of or all of the surgery name</li>
+  <li>only search for surgeries in England</li>
+</ul>
+
+<form action="show-list-of-pharmacies-with-full-times-v3-2">
+
+<fieldset>
+  <div class="form-group">
+    <input type="text" size="30" name="postcode">
+  </div>
+</fieldset>
+
+<a href="show-list-of-gps" type="submit" class="button" style="margin-top: 0; margin-bottom: 0;">Next</a>
+
+</form>
+
+{% endblock %}
+
+
+{% block emergencyContent %}
+
+{% endblock%}
+
+
+{% block mutedCallout%}
+
+{% endblock%}
+
+
+{% block body_after %}
+
+{% endblock %}
