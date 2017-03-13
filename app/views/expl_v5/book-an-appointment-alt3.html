@@ -1,0 +1,69 @@
+{% extends '_layouts/layout_2-3_no_title_block.html' %}
+
+
+{% block page_title %}
+Book an appointment - NHS.UK
+{% endblock %}
+
+
+{% block pageTitle %}
+Book a GP appointment online
+{% endblock %}
+
+{% block pageIntro %}
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class="info-panel">You can only search for surgeries in England.</div>
+
+
+<p>To book online you need to be registered with your GP's online services.</p>
+
+
+<details style="margin-top: 16px; margin-bottom: 32px;">
+
+<summary style="color:#0072c6;"><span class="nearest_opening_times" style="text-decoration: underline;">Not sure if you are registered to use your GP surgery's online services?</span></summary>
+
+<div class="muted">
+  <p>To use your GP surgery's online services they will have given you a username and password.</p>
+  <p>If you don't have these contact your GP surgery's reception.</p>
+</div>
+
+</details>
+
+
+<form action="">
+
+<fieldset>
+<legend style="font-weight: 600;">
+What's the name of your GP surgery?
+</legend>
+  <div class="form-group">
+    <input type="text" size="30" name="postcode">
+  </div>
+</fieldset>
+
+<a href="show-list-of-gps" type="submit" class="button" style="margin-top: -32px; margin-bottom: 0;">Next</a>
+
+</form>
+
+
+{% endblock %}
+
+
+{% block emergencyContent %}
+
+{% endblock%}
+
+
+{% block mutedCallout%}
+
+{% endblock%}
+
+
+{% block body_after %}
+
+{% endblock %}
