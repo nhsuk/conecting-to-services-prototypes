@@ -1229,6 +1229,13 @@ label {
   background-color: #768692;
 }
 
+.warning {
+  background-color: #f8e9e6;
+  padding: 16px 32px 16px 32px;
+  border-top: solid 4px #c41d00;
+  margin-bottom: 32px;
+}
+
 .link_reverse-polarity {
   color: #ffffff;
 }

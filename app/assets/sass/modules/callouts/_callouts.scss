@@ -31,8 +31,6 @@
 
 }
 
-
-
 .severe {
   border-top: 12px solid #d81e05;
   background-color: #fbe8e6;
@@ -42,4 +40,11 @@
 
 .severe hr {
   background-color: #768692;
+}
+
+.warning {
+  background-color: #f8e9e6;
+  padding: $leading $leading*2 $leading $leading*2;
+  border-top: solid 4px #c41d00;
+  margin-bottom: 32px;
 }

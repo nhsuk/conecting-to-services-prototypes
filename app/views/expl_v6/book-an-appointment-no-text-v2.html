@@ -1,0 +1,67 @@
+{% extends '_layouts/layout_2-3_no_title_block.html' %}
+
+
+{% block page_title %}
+Book an appointment - NHS.UK
+{% endblock %}
+
+
+{% block pageTitle %}
+Book a GP appointment online
+{% endblock %}
+
+{% block pageIntro %}
+
+{% endblock %}
+
+
+{% block content %}
+
+<!--
+<p class="muted">You didn't enter a GP surgery's name.</p>
+
+
+<p class="attention">You didn't enter a GP surgery's name.</p>
+
+<p class="callout">You didn't enter a GP surgery's name.</p>
+
+<p class="info-panel">You didn't enter a GP surgery's name.</p>
+
+<p class="severe">You didn't enter a GP surgery's name.</p>
+-->
+<p class="warning" style="font-weight: 600;">You didn't enter a GP surgery's name.</p>
+
+
+<form action="">
+
+<fieldset>
+<legend style="font-weight: 600;">
+What's your GP surgery's name?
+</legend>
+  <div class="form-group">
+    <input type="text" size="30" name="postcode" style="margin-bottom: 0; border:4px solid #ca3313;">
+  </div>
+</fieldset>
+
+<a href="show-list-of-gps" type="submit" class="button" style="margin-top: -32px; margin-bottom: 32px;">Next</a>
+
+</form>
+
+
+
+{% endblock %}
+
+
+{% block emergencyContent %}
+
+{% endblock%}
+
+
+{% block mutedCallout%}
+
+{% endblock%}
+
+
+{% block body_after %}
+
+{% endblock %}
