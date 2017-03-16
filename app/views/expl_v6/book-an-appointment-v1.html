@@ -17,18 +17,16 @@ Book a GP appointment online
 
 {% block content %}
 
-<div class="info-panel">You can only search for surgeries in England.</div>
-
-
-<p>To book online you need to be registered with your GP's online services. Your GP surgery will have given you a username and password.</p>
-
+<p>To book an appointment, you need to be registered with your GP's online services. </p>
 
 
 <details style="margin-top: 16px; margin-bottom: 32px;">
 
-<summary style="color:#0072c6;"><span class="nearest_opening_times" style="text-decoration: underline;">I am not registered to use GP surgery's online services</span></summary>
+<summary style="color:#0072c6;"><span class="nearest_opening_times" style="text-decoration: underline;">I'm not registered to use online services.</span></summary>
 
-<p class="muted">Something here about how you can.</p>
+<div class="info-panel">
+  <p>To register for online services, ask your GP surgery for a registration form. After you fill in the form, the surgery will send you a username and password.</p>
+</div>
 
 </details>
 
@@ -37,8 +35,9 @@ Book a GP appointment online
 
 <fieldset>
 <legend style="font-weight: 600;">
-What's the name of your GP surgery?
+  What's your GP surgery's name?
 </legend>
+<hint>We need to know this so we can take you to the right booking system.</hint>
   <div class="form-group">
     <input type="text" size="30" name="postcode"  style="margin-bottom: 0;">
   </div>

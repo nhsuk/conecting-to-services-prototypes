@@ -17,8 +17,6 @@ Book a GP appointment online
 
 {% block content %}
 
-<!-- <div class="info-panel">You can only search for surgeries in England.</div>-->
-
 
 <p>If your GP is in England, this will take you to your surgery’s online booking system.</p>
 
@@ -29,13 +27,22 @@ Book a GP appointment online
 <li> sign into the booking system with the username and password your surgery gave you</li>
 </ol>
 
+<details style="margin-top: 16px; margin-bottom: 32px;">
+
+<summary style="color:#0072c6;"><span class="nearest_opening_times" style="text-decoration: underline;">I haven't got a username and password</span></summary>
+
+<div class="info-panel">
+  <p>To get a username and password, ask your surgery for a form to register for online services.</p>
+</div>
+
+</details>
 
 
 <form action="">
 
 <fieldset>
 <legend style="font-weight: 600;">
-To find your booking system, enter your surgery’s name.
+What's your GP surgery's name?
 </legend>
   <div class="form-group">
     <input type="text" size="30" name="postcode" style="margin-bottom: 0;">
@@ -45,16 +52,7 @@ To find your booking system, enter your surgery’s name.
 <a href="show-list-of-gps" type="submit" class="button" style="margin-top: -32px; margin-bottom: 32px;">Next</a>
 
 </form>
-<details style="margin-top: 16px; margin-bottom: 32px;">
 
-<summary style="color:#0072c6;"><span class="nearest_opening_times" style="text-decoration: underline;">I haven’t got a username and password</span></summary>
-
-<div class="info-panel">
-  <p>To use your GP surgery's online services you will have been a username and password to access their services.</p>
-  <p>If you don't have a username and password contact your GP surgery's reception.</p>
-</div>
-
-</details>
 
 
 {% endblock %}
