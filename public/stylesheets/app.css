@@ -327,7 +327,7 @@ hr {
 }
 
 .service-alert {
-  background-color: #FFB81C;
+  background-color: #fada88;
   color: #00365D;
   font-size: 16px;
   line-height: 16px;
@@ -357,7 +357,7 @@ hr {
 .service-status {
   border: 2px solid #00365D;
   background-color: #00365D;
-  color: #FFB81C;
+  color: #fada88;
   padding: 5px 10px;
   margin: 0 10px 0 0;
   font-weight: 200;
