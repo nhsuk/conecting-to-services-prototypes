@@ -1236,6 +1236,13 @@ label {
   margin-bottom: 32px;
 }
 
+.warning-yellow {
+  background-color: #fada88;
+  padding: 16px 32px 16px 32px;
+  border-top: solid 4px #ffb81c;
+  margin-bottom: 32px;
+}
+
 .link_reverse-polarity {
   color: #ffffff;
 }
