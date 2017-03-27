@@ -18,7 +18,7 @@
 }
 
 .info-panel {
-  border-left: solid 6px $dark-blue2;
+  border-left: solid 8px $dark-blue2;
   padding: 0 $leading;
   margin-bottom: $leading;
 }
@@ -59,6 +59,6 @@
 .warning-against-form {
   background-color: #f8e9e6;
   padding: $leading $leading $leading*0.25 $leading*2;
-  border-left: solid 4px #c41d00;
+  border-left: solid 8px #c41d00;
   margin-bottom: 32px;
 }
