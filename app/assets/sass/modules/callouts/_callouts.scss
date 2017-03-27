@@ -55,3 +55,10 @@
   border-top: solid 4px #ffb81c;
   margin-bottom: 32px;
 }
+
+.warning-against-form {
+  background-color: #f8e9e6;
+  padding: $leading $leading $leading*0.25 $leading*2;
+  border-left: solid 4px #c41d00;
+  margin-bottom: 32px;
+}
