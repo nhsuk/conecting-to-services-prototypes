@@ -1,4 +1,4 @@
-{% extends '_layouts/layout_2-3_no_title_block_with_2_3_warning.html' %}
+{% extends '_layouts/layout_2-3_no_title_block.html' %}
 
 
 {% block page_title %}
@@ -14,26 +14,19 @@ Book a GP appointment online
 
 {% endblock %}
 
-{% block pageWarning %}
-<p class="form-warning" tabindex="-1" style="font-weight: 600;">You need to enter your surgery name</p>
-
-{% endblock %}
-
 
 {% block content %}
 
 
-
 <form action="">
 
-<div class="warning-against-form-no-bg">
+<div class="warning-against-form">
 <fieldset>
-<legend>
-<span class="form-label-bold" style="font-weight: 600; display:block;">What's the name of your GP surgery?</span>
-<span class="error-message" style="color: #c41d00;">Cannot be blank</span>
+<legend style="font-weight: 600;">
+You need to enter your surgery name
 </legend>
   <div class="form-group">
-    <input type="text" size="30" name="postcode" style="margin-bottom: 0; border:4px solid #ca3313;">
+    <input type="text" size="30" name="postcode" style="margin: 16px 0 0 0; border:4px solid #ca3313;">
   </div>
 </fieldset>
 </div>

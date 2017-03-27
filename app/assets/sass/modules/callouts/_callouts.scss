@@ -18,8 +18,8 @@
 }
 
 .info-panel {
-  border-left: solid 8px $dark-blue2;
-  padding: 0 $leading;
+  border-left: solid 5px $dark-blue2;
+  padding: 0 $leading*1.5;
   margin-bottom: $leading;
 }
 
@@ -59,6 +59,19 @@
 .warning-against-form {
   background-color: #f8e9e6;
   padding: $leading $leading $leading*0.25 $leading*2;
-  border-left: solid 8px #c41d00;
+  border-left: solid 5px #c41d00;
+  margin-bottom: 32px;
+}
+
+.warning-against-form-no-bg {
+  padding: 0 0 0 16px;
+  border-left: solid 5px #c41d00;
+  margin-bottom: 32px;
+}
+
+.form-warning {
+  background-color: #f8e9e6;
+  padding: $leading $leading*2 $leading $leading*2;
+  border-top: solid 4px #c41d00;
   margin-bottom: 32px;
 }
