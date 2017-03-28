@@ -1,0 +1,61 @@
+{% extends '_layouts/layout_2-3_no_title_block_with_2_3_warning.html' %}
+
+
+{% block page_title %}
+Book an appointment - NHS.UK
+{% endblock %}
+
+
+{% block pageTitle %}
+Book a GP appointment online
+{% endblock %}
+
+{% block pageIntro %}
+
+{% endblock %}
+
+{% block pageWarning %}
+<div class="form-warning" tabindex="-1">
+<p style="font-weight: 600; font-size: 24px; padding: 0; margin: 0; margin: 16px 0;">
+There was a problem</p>
+<p style="font-weight: 600; padding: 0; margin: 0; margin: 16px 0;"><a href="#" style="color: #000000;">You need to enter your surgery name</a></p>
+
+{% endblock %}
+
+
+
+{% block content %}
+
+
+<form action="">
+
+<div style="margin-top: 32px;">
+<fieldset>
+  <div class="form-group">
+    <input type="text" size="30" name="postcode" style="margin: 0 0 0 0; border:4px solid #ca3313;">
+  </div>
+</fieldset>
+</div>
+
+<a href="book-an-appointment-no-results" type="submit" class="button" style="margin-top: 0; margin-bottom: 32px;">Next</a>
+
+</form>
+
+
+
+{% endblock %}
+
+
+{% block emergencyContent %}
+
+{% endblock%}
+
+
+{% block mutedCallout%}
+
+{% endblock%}
+
+
+{% block body_after %}
+
+{% endblock %}
