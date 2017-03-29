@@ -171,9 +171,9 @@ a:visited {
 
 a:focus {
   outline: 0;
-  -webkit-box-shadow: 0 0 0 5px #F7E214;
-  -moz-box-shadow: 0 0 0 5px #F7E214;
-  box-shadow: 0 0 0 5px #F7E214;
+  -webkit-box-shadow: 0 0 0 5px #FFB81C;
+  -moz-box-shadow: 0 0 0 5px #FFB81C;
+  box-shadow: 0 0 0 5px #FFB81C;
 }
 
 body, pre.user-input {
@@ -439,9 +439,9 @@ hr {
 
 .button:focus {
   outline: 0;
-  -webkit-box-shadow: 0 0 0 5px #F7E214;
-  -moz-box-shadow: 0 0 0 5px #F7E214;
-  box-shadow: 0 0 0 5px #F7E214;
+  -webkit-box-shadow: 0 0 0 5px #FFB81C;
+  -moz-box-shadow: 0 0 0 5px #FFB81C;
+  box-shadow: 0 0 0 5px #FFB81C;
 }
 
 @media (min-width: 500px) {
@@ -600,9 +600,9 @@ details summary {
 
 details summary:focus {
   outline: 0;
-  -webkit-box-shadow: 0 0 0 5px #F7E214;
-  -moz-box-shadow: 0 0 0 5px #F7E214;
-  box-shadow: 0 0 0 5px #F7E214;
+  -webkit-box-shadow: 0 0 0 5px #FFB81C;
+  -moz-box-shadow: 0 0 0 5px #FFB81C;
+  box-shadow: 0 0 0 5px #FFB81C;
 }
 
 html {
@@ -743,9 +743,9 @@ input[type='text']:focus,
 input[type='number']:focus,
 input[type='tel']:focus {
   outline: 0;
-  -webkit-box-shadow: 0 0 0 5px #F7E214;
-  -moz-box-shadow: 0 0 0 5px #F7E214;
-  box-shadow: 0 0 0 5px #F7E214;
+  -webkit-box-shadow: 0 0 0 5px #FFB81C;
+  -moz-box-shadow: 0 0 0 5px #FFB81C;
+  box-shadow: 0 0 0 5px #FFB81C;
 }
 
 input[type='text'].-small,
@@ -884,9 +884,9 @@ label .form-hint {
 }
 
 .js-enabled .block-label.selection-button-radio.focused::before, .js-enabled .block-label.selection-button-checkbox.focused::before {
-  -webkit-box-shadow: 0 0 0 5px #F7E214;
-  -moz-box-shadow: 0 0 0 5px #F7E214;
-  box-shadow: 0 0 0 5px #F7E214;
+  -webkit-box-shadow: 0 0 0 5px #FFB81C;
+  -moz-box-shadow: 0 0 0 5px #FFB81C;
+  box-shadow: 0 0 0 5px #FFB81C;
 }
 
 .js-enabled .block-label.selection-button-radio.selected::after, .js-enabled .block-label.selection-button-checkbox.selected::after {
@@ -928,9 +928,9 @@ textarea {
 
 textarea:focus {
   outline: 0;
-  -webkit-box-shadow: 0 0 0 5px #F7E214;
-  -moz-box-shadow: 0 0 0 5px #F7E214;
-  box-shadow: 0 0 0 5px #F7E214;
+  -webkit-box-shadow: 0 0 0 5px #FFB81C;
+  -moz-box-shadow: 0 0 0 5px #FFB81C;
+  box-shadow: 0 0 0 5px #FFB81C;
 }
 
 .gp-finder-search .form-control {
