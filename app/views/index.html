@@ -1,4 +1,4 @@
-{% extends '_layouts/layout_2-3.html' %}
+{% extends '_layouts/layout_index.html' %}
 
 {% block page_title %}Index : {{serviceName}}{% endblock %}
 
@@ -14,7 +14,7 @@
 
 {% endblock%}
 
-{% block content %}
+{% block leftContent %}
 
 <a name="production"></a>
 
@@ -174,6 +174,21 @@ This is the very basic route: Users can 'find' a GP, and then see a page that te
     <li><a href="/expl_v1/d2/choose-journey">v1 / d2: Choose and start journey</a></li>
     <li><a href="/expl_v1/d2/index">v1 / d2: Symptoms and condition index</a></li>
   </ul>
+
+{% endblock %}
+
+{% block rightContent %}
+<hr>
+
+<h2>Resources</h2>
+
+<ul>
+<li><a href="https://trello.com/c/5dXqPCU0/42-colours">Colour palette</a></li>
+<li><a href="https://govuk-elements.herokuapp.com/errors/example-form-validation-single-question-radio">gov.uk form example</a></li>
+<li><a href="https://github.com/nhsuk/register-with-a-gp-beta-web/pull/18">Register with a GP warnings reference</a></li>
+<li><a href="https://register-with-a-gp.staging.beta.nhschoices.net/register/name">Reg with a GP protoype</a></li>
+<li><a href="https://www.gov.uk/apply-renew-passport">Apply online for a UK passport</a></li>
+</ul>
 
 {% endblock %}
 
