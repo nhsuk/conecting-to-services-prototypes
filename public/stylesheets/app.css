@@ -1232,7 +1232,7 @@ label {
 .warning {
   background-color: #f8e9e6;
   padding: 16px 32px 16px 32px;
-  border-top: solid 4px #c41d00;
+  border-top: solid 4px #da291c;
   margin-bottom: 32px;
 }
 
@@ -1246,20 +1246,20 @@ label {
 .warning-against-form {
   background-color: #f8e9e6;
   padding: 16px 16px 4px 32px;
-  border-left: solid 5px #c41d00;
+  border-left: solid 5px #da291c;
   margin-bottom: 32px;
 }
 
 .warning-against-form-no-bg {
-  padding: 0 0 0 16px;
-  border-left: solid 5px #c41d00;
+  padding: 0 0 0 24px;
+  border-left: solid 6px #da291c;
   margin-bottom: 32px;
 }
 
 .form-warning {
   background-color: #f8e9e6;
   padding: 16px 32px 16px 32px;
-  border-top: solid 4px #c41d00;
+  border-top: solid 4px #da291c;
   margin-bottom: 32px;
 }
 

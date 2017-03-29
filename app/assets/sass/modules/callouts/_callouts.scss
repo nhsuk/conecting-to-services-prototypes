@@ -45,7 +45,7 @@
 .warning {
   background-color: #f8e9e6;
   padding: $leading $leading*2 $leading $leading*2;
-  border-top: solid 4px #c41d00;
+  border-top: solid 4px #da291c;
   margin-bottom: 32px;
 }
 
@@ -59,19 +59,19 @@
 .warning-against-form {
   background-color: #f8e9e6;
   padding: $leading $leading $leading*0.25 $leading*2;
-  border-left: solid 5px #c41d00;
+  border-left: solid 5px #da291c;
   margin-bottom: 32px;
 }
 
 .warning-against-form-no-bg {
-  padding: 0 0 0 16px;
-  border-left: solid 5px #c41d00;
+  padding: 0 0 0 24px;
+  border-left: solid 6px #da291c;
   margin-bottom: 32px;
 }
 
 .form-warning {
   background-color: #f8e9e6;
   padding: $leading $leading*2 $leading $leading*2;
-  border-top: solid 4px #c41d00;
+  border-top: solid 4px #da291c;
   margin-bottom: 32px;
 }
