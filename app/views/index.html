@@ -1,13 +1,22 @@
-{% extends '_layouts/layout_index.html' %}
+{% extends '_layouts/layout_2-3.html' %}
 
 {% block page_title %}Index : {{serviceName}}{% endblock %}
 
 {% block pageTitle %}Prototypes{% endblock %}
 
-{% block pageIntro %}<p>This is the design work for the nhs.uk's Connecting to a GP digital service.</p>
-<p>These are not live services.</p>{% endblock%}
+{% block pageIntro %}
+<p>This is the design work for the nhs.uk's Connecting to a GP digital service.</p>
+<p>These are not live services.</p>
+<ul style="line-height: 20px;">
+  <li><a href="#production" style="color: #ffffff;">Production candidates</a></li>
+  <li><a href="#exploration" style="color: #ffffff;">Exploration</a></li>
+</ul>
 
-{% block leftcontent %}
+{% endblock%}
+
+{% block content %}
+
+<a name="production"></a>
 
 <h2>Production candidates</h2>
 
@@ -38,10 +47,10 @@
 <h3>MVP for Book an Appointment with a GP v1</h3>
 <p><strong><a href="/prod_v1/">Index</a></strong></p>
 
-{% endblock %}
+<p>&nbsp;</p>
+<hr>
 
-
-{% block rightcontent %}
+<a name="exploration"></a>
 
 <h2>Exploration</h2>
 
