@@ -7,7 +7,7 @@ Book an appointment - NHS.UK
 
 
 {% block pageTitle %}
-We can't find a surgery matching "searchterm"
+We can't find a surgery containing "searchterm"
 {% endblock %}
 
 {% block pageIntro %}
@@ -17,27 +17,24 @@ We can't find a surgery matching "searchterm"
 
 {% block content %}
 
-<p>Check:</p>
-
-<ul>
-  <li>the name you're using is the one your surgery uses</li>
-  <li>you've spelt the name correctly</li>
-  <li>you don't have spaces between words that should be joined up</li>
-</ul>
-
 
 <form action="">
 
-<fieldset style="margin-top: 48px;">
-<legend style="font-weight: 600;">
-What's the name of your GP surgery?
-</legend>
-  <div class="form-group">
-    <input type="text" size="30" name="postcode" style="margin-bottom: 0;">
-  </div>
-</fieldset>
 
-<a href="book-an-appointment-list-of-gps" type="submit" class="button" style="margin-top: 0; margin-bottom: 32px;">Search again</a>
+  <div class="warning-against-form-no-bg">
+  <fieldset>
+  <legend>
+  <span class="form-label-bold" style="font-weight: 600; display:block;">What's the name of your GP surgery?</span>
+  <span class="error-message" style="color: #da291c;">You need to enter a surgery name</span>
+  </legend>
+    <div class="form-group">
+      <input type="text" size="30" name="postcode" style="margin-bottom: 0; border:3px solid #da291c;">
+    </div>
+  </fieldset>
+  </div>
+
+
+<a href="book-an-appointment-list-of-gps" type="submit" class="button" style="margin-top: 0; margin-bottom: 32px;">Next</a>
 
 </form>
 
