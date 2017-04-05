@@ -1207,7 +1207,7 @@ label {
 }
 
 .info-panel {
-  border-left: solid 5px #006BBD;
+  border-left: solid 4px #006BBD;
   padding: 0 24px;
   margin-bottom: 16px;
 }
@@ -1252,7 +1252,7 @@ label {
 
 .warning-against-form-no-bg {
   padding: 0 0 0 24px;
-  border-left: solid 6px #da291c;
+  border-left: solid 4px #da291c;
   margin-bottom: 32px;
 }
 
