@@ -1,4 +1,4 @@
-{% extends '_layouts/layout_2-3_1-3.html' %}
+{% extends '_layouts/layout_2-3.html' %}
 
 
 {% block page_title %}
@@ -50,12 +50,12 @@ and <a href="http://www.nhs.uk/Conditions/Constipation/Pages/Treatment.aspx">con
 <li>you bleed from your bottom</li>
 <li>your diarrhoea lasts longer than a few days</li>
 </ul>
+<p style="margin-bottom: 0;"><a href=-"http://beta.nhs.uk/book-a-gp-appointment/">Book a GP appointment online</a></p>
 </section>
 
-{% endblock %}
+<p style="padding: 0;"></p>
 
-
-{% block emergencyContent %}
+<div class="severe" style="background-color: #d81e05; color: #ffffff;">
 
 <h2>Call 999 or go to A&amp;E if you</h2>
 
@@ -70,37 +70,20 @@ and <a href="http://www.nhs.uk/Conditions/Constipation/Pages/Treatment.aspx">con
 <li>are diabetic and vomiting</li>
 </ul>
 
+</div>
 
+<p style="padding: 0;"></p>
 
-{% endblock%}
-
-{% block mutedCallout%}
-
-<div class="callout callout__muted">
+<div style="background-color: #cccccc; padding: 16px;">
     <div class="reading-width">
       <h2>Call 111</h2>
-      <p>If you can’t speak to your GP or don’t know what to do next</p>
+      <p>If you can’t speak to your GP or don’t know what to do next.</p>
     </div>
-  </div>
+</div>
 
-{% endblock%}
 
-{% block body_after %}
-  <script>
-    $(function() {
-      var $group = $('#previous-name');
-      var $els = $('[name="name-changed"]');
-      var $selectedEl = $('[name="name-changed"]:checked');
-      if ($selectedEl.val() !== "yes") {
-        $group.hide();
-      }
-      $els.on('change', function(e) {
-        if (this.value === "yes") {
-          $group.show();
-        } else {
-          $group.hide();
-        }
-      });
-    });
-  </script>
+
+
+</div>
+
 {% endblock %}
